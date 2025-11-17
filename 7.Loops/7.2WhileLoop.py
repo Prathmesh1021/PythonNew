@@ -6,5 +6,6 @@ while a<=10:
 #Normal And Control While 
 a=0
 while a<=5:
-    a=a+6
+    a=a+1
     print(a)
+    
