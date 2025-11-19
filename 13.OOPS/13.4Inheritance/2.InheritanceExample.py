@@ -3,7 +3,7 @@ class FactoryMumbai:# parent Class /super class
     a="I am an attribute mentioned inside Factory "
     def hello (self):
         print("hello I am a metnhod mentioned inside factory")
-        
+        #update
 class FactoryPune(FactoryMumbai):#childe class/sub class 
     pass
 obj=FactoryMumbai()
