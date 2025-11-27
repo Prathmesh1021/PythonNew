@@ -14,3 +14,21 @@ print(ord("B"))
 
 print("A">"B")
 print("A"<"B")  
+
+#Comparison operator 
+print("Practice*************************")
+a=12
+i=12.1
+
+print(a<i)
+print(a>i)
+print(a<=i)
+print(a>=i)
+print(a!=i)
+
+print(243>=342)
+print(ord("A"))
+print(ord("B"))
+
+print("A">"B")
+print("A"<"B")

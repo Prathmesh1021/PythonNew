@@ -13,3 +13,9 @@ print(bool(f))
 
 g=235j
 print(bool(g))
+
+h={}
+print(bool(h))
+
+i=0
+print(bool(i))
