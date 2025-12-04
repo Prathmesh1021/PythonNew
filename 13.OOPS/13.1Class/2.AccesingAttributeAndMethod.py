@@ -1,3 +1,4 @@
+
 #Accesing Attributes And Methods 
 class Animal:
     type="Cat"  #Attributes

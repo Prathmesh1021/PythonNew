@@ -6,3 +6,4 @@ class Factory:
 print("hello how are you i am getting initialized ")
 print(Factory().a)
 Factory().hello()
+

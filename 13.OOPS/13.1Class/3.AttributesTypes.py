@@ -7,5 +7,5 @@ class car:
         print(f"Welcome to {self.name}")
         
 n=car("Creta")
-
 n.show()
+
