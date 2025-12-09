@@ -26,3 +26,8 @@ print("Empty:",isEmpty)
 #Size
 print("Size:",len(stack))
 
+######
+stack=[]
+
+#push
+stack.push
