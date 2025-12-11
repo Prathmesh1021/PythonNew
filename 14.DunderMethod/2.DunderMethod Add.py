@@ -12,6 +12,6 @@ class Animal:
         return f"Your sum of ages are {self.age +sum}"
 obj=Animal("lion",12)
 obj2=Animal("dolphin",14)  
-obj3=Animal("tiger",34) 
+obj3=Animal("tiger",34)
 
 print(obj +(obj2,obj3))

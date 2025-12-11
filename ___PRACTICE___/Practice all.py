@@ -379,4 +379,84 @@ print(D)
 S={i*i for i in range(1,10) if i%2==0}
 print(S)
         
+##Abstraction Method Example 
+from abc import ABC, abstractmethod
+class abstract (ABC):
+    @abstractmethod
+    def perimeter(self):
+        pass
+    @abstractmethod
+    def area(self):
+        pass
+class Square(abstract):
+    def __init__(self,side):
+        self=side=side
+    def perimeter(self):
+        print("i have created")
+    def area(self):
+        print("i have created this ")
+class Circle (abstract):
+    def __init__(self,radious):
+        self.radious=radious
+    def perimeter(self):
+       print("i have created ")
+    def area (self):
+       print("i have created this ") 
+#obj=Circle(7)
+#obj=Square(4)  
         
+###Decorator Example 1 --Using Decorator and Wrapper Class 
+
+def decorate(func):
+    def Wrapper():
+        print("before")
+        func()
+        print("after")
+    return Wrapper
+@decorate
+def hello():
+    print("hello i am prathmesh patil")
+hello()
+
+###Decorator Example 2__ Addition of two numbers 
+def decorate(func):
+    def Wrapper(a,b):
+        print("before addition")
+        func(a,b)
+        print("after addition")
+    return Wrapper
+@decorate
+def add(a,b):
+    print(f"your addithion is: {a+b}")
+add(12,56)
+
+###Decorator Example 3 --- usinf args addition
+def addition(*args):
+    sum=0
+    for i in args:
+        sum=sum+i
+    print(sum)
+addition(12,20,40,70)   
+
+##decorator Example ---Using Kwargs information details 
+def information(**kwargs):
+    print("your information is :")
+    for i in kwargs:
+        print(f"{i}:{kwargs[i]}")
+    
+information (name="prathmesh",age=23,designation ="Developer",mobile=1213131313)
+
+
+##Decorators Example 5 Args And Kwargs Both 
+def decorate(func):
+    def Wrapper(*args,**kwargs):
+        print("before adddition")
+        func(*args,**kwargs)
+        print("After addition ")
+    return Wrapper
+@decorate
+def add(a,b,c,d,e,f):
+    print(f"Total is {a+b+c+d+e+f}")
+add(10,20,30,40,50,60)
+
+###################################################################################
