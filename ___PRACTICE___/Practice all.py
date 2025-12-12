@@ -459,4 +459,68 @@ def add(a,b,c,d,e,f):
     print(f"Total is {a+b+c+d+e+f}")
 add(10,20,30,40,50,60)
 
-###################################################################################
+##Lambda addition operation
+Add=lambda a,b:a+b
+print(Add(12,33)) 
+##Lambada Example 2 Even Odd
+evenodd=lambda c:"even" if c%2==0 else "odd"
+print(evenodd(13)) 
+##map 
+a=[1,2,3,4,5,6]
+result=map(lambda x:x*2,a)
+print(list(result))
+##map2
+b=[1,2,3,4,5,6]
+def double(x):
+    return x*2
+result=map(double,b)
+print(list(result))
+#filter
+def even(x):
+    if x%2==0:
+        return True
+    else:
+        return False
+a=[1,2,3,4,5,6,7,8,9]
+result=filter(even,a)
+print(list(result))
+#filter 2
+a=[1,2,3,4,5,6,7,8,9]
+result=filter(lambda c:c if c%2==True else False,a)
+print(list(result))
+
+##Addition Using Lambada 
+addition=lambda a,b:a+b
+print(addition(12,32))
+##use ternary operation in lambada add check even odd 
+evenodd=lambda x: "even" if x%2==0 else "odd"
+print(evenodd(32))
+##map using squre of lists 
+a=[1,2,3,4,5,6,7]
+result=map(lambda x:x*2,a)
+print(list(result))
+##map2 traditional method 
+a=[7,6,5,4,3,2,1]
+def double(x):
+    return x*2
+result=map(double,a)
+print(list(result))
+##filter method using ======>even odd operations 
+def even(x):
+    if x%2==0:
+        return True
+    else:
+        return False
+a=[1,2,3,4,5,6,7,8,9,8,7,6,5,4,3,2,1]
+result=filter(even,a)
+print(list(result))
+
+##filter 2
+a=[34,34,2,24,35,465,85,6]
+result=filter(lambda x:x if x%2==True else False,a)
+print(list(result))
+
+#####################################################################
+
+        
+        
