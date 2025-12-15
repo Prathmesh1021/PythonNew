@@ -521,6 +521,403 @@ result=filter(lambda x:x if x%2==True else False,a)
 print(list(result))
 
 #####################################################################
+class A:
+    a=12
+    def hello(self):
+        print("how are you")
+print("Welcome in class")
+print(A().a)
+A().hello()
 
+class B:
+    a="dog"
+    def sound(self):
+        print("bhubhu")
+print(B().a)
+B().sound()
+
+class Car:
+    wheel=4
+    def __init__(self,name):
+        self.name=name
+    def show(self):
+        print(f"your car name is {self.name}")
+obj=Car("TATA")
+obj.show()
+
+class Animal:
+    def __init__(self,age):
+        self.age=age
+    def show(self):
+        print(f"Your age is {self.age}")
+    @classmethod
+    def class1(cls):
+        print("This is the class method")
+    @staticmethod
+    def static():
+        print("this is the static method")
         
+obj=Animal(12)
+obj.show()
+obj.class1()
+obj.static()
+
+###
+class Cons:
+    def __init__(self,name):
+        self.name=name
+s=Cons("Reyansh patil")
+print(s.name)
+##constructor 2
+class Cons2:
+    def __init__(self,material,zip,pocket):
+        self.material=material
+        self.zip=zip
+        self.pocket=pocket
+    def show(self):
+        print(f"your company details are {self.material},{self.zip},{self.pocket}")
+obj=Cons2("lather",33,32)
+obj1=Cons2("Nylon",2,4)
+
+obj.show()
+obj1.show()
+
+## Simple Object 
+class object:
+    def hello(self):
+        print("hello")
+print(object().hello())
+####
+x=[]
+y=[12,3,4,5,6,6,7,]
+z=[232,24.34,"fuiwgfiu","##%@#%@^#&$&",34j,True]
+print(x)
+print(y)
+print(z)
+
+#####
+a=[324,364,44,7,4,3,9,3,9,4]
+a.append(35)
+a.sort()
+print(a)
+
+##create algoritham 
+list=[13,5467,7,36,4,563,63]
+v=list[0]
+
+for i in list:
+    if i <v:
+        v=i
+print("lowest value :",v)
+
+###########
+stack=[]
+
+stack.append('A')
+stack.append('B')
+stack.append('C')
+stack.append('D')
+stack.append('E')
+
+print("stack:",stack)
+
+topelement=stack[-1]
+print("peek:",topelement)
+
+popelement=stack.pop()
+print("pop:",popelement)
+
+print("After pop Stack are",stack)
+
+isEmpty=not bool(stack)
+print("empty",isEmpty)
+
+print("size:",len(stack))
+
+##stack using class
+
+class Stack:
+    def __init__(self):
+        self.stack=[]
         
+    def push(self,element):
+        self.stack.append(element)
+        
+    def peek(self):
+        if self.isEmpty():
+            return "the stack is Empty"
+        return self.stack[-1]
+    def pop(self):
+        if self.isEmpty():
+            return "the stack is Empty"
+        return self.stack.pop()
+    
+    def isEmpty(self):
+        return len(self.stack)==0
+    
+    def size(self):
+        return len(self.stack)
+mystack=Stack()
+mystack.push('A')
+mystack.push('B')
+mystack.push('C')
+mystack.push('D')
+
+print("Stack:",mystack.stack)
+print("Peek:",mystack.peek())
+print("pop:",mystack.pop())
+print("After Pop Stack are",mystack.stack)
+print("Empty:",mystack.isEmpty())
+print("size:",mystack.size())
+
+#####class 
+class Parent:
+    a=12
+    def hello(self):
+        print("hello guys")
+class child(Parent):
+    pass
+print(child().a)
+child().hello()
+
+####
+class Factory:
+    def __init__(self,material,zip):
+        self.material=material
+        self.zip=zip
+class Pune(Factory):
+    def __init__(self, material, zip,pocket):
+        super().__init__(material, zip)
+        self.pocket=pocket
+    def show(self):
+        print(f"Your company details is :{self.material},{self.zip},{self.pocket}")
+
+obj=Pune("lather",21,2)
+obj.show()
+
+class Single:
+    a=34
+    def hello(self):
+        print("this is the single level inheritance ")
+class Single1(Single):
+    pass
+print(Single1().a) 
+Single1().hello()      
+
+#########
+class Animal:
+    def __init__(self,name):
+        self.name=name
+class Human:
+    def __init__(self,name1,age):
+        self.name1=name1
+        self.age=age
+class Robort(Human,Animal):
+    def __init__(self):
+        Animal.__init__(self,"tiger")
+        Human.__init__(self,"Akash",24)
+obj=Robort()
+print(obj.name) 
+print(obj.name1)
+print(obj.age)   
+        
+####multilevel
+class Factory:
+    def __init__(self,material,zip):
+        self.material=material
+        self.zip=zip
+class Pune(Factory):
+    def __init__(self, material, zip,color):
+        super().__init__(material, zip)
+        self.color=color
+class Bhopal(Pune):
+    def __init__(self, material, zip, color,pocket):
+        super().__init__(material, zip, color)
+        self.pocket=pocket
+    def show(self):
+        print(f"Your comppany details are {self.material},{self.zip},{self.color},{self.pocket}")
+
+obj=Bhopal("Lather",3,"black",44)
+obj.show()
+
+###########
+class Factory:
+    def __init__(self,material,zip,pocket):
+        self.material=material
+        self.zip=zip
+        self.pocket=pocket
+        
+class Pune(Factory):
+    def __init__(self, material, zip, pocket):
+        super().__init__(material, zip, pocket)
+    def show(self):
+        print(f"Pune company details is:{self.material},{self.zip},{self.pocket}")   
+class Bhopal(Factory):
+    def __init__(self, material, zip, pocket):
+        super().__init__(material, zip, pocket)
+    def show(self):
+        print(f"Bhopal company details is:{self.material},{self.zip},{self.pocket}")   
+
+obj1=Pune("nylon",2,4)
+obj2=Bhopal("lather",4,5)
+obj1.show()
+obj2.show()
+####poly sample example
+def show():
+    print("hello")
+def show():
+    print("hi")
+show()
+###poly Example 2
+##method overriding
+class Animal:
+    def show(self):
+        print("hello how are you")
+class Human(Animal):
+    def show(self):
+        print("hello what about you")
+obj=Human()
+obj.show()
+
+###duck typing
+class Animal:
+    def show(self):
+        print("i am showing")
+class Human:
+    def show(self):
+        print(" i am also showing")
+    
+o=Animal()
+o=Human()
+o.show()
+o.show()
+###functional approach
+def addition(a,b):
+    return a+b
+print(addition(12,34))    
+        
+### imperative approach
+a=23
+b=53
+print(a+b)
+
+##Encapsulation
+#public
+class A:
+    a="hello this is the public class"
+    def show(self):
+        print("hello this is public method")
+class B(A):
+    def show2(self):
+        print(super().a)     
+ob=B()
+ob.show2()
+ob.show()
+
+#####Protercted 
+class A:
+    _a="hello this is the protected class"#_undersorce is protected
+    def _show(self):
+        print("hello this is protected method")
+class B(A):
+    def show2(self):
+        print(super()._a)     
+ob=B()
+ob.show2()
+ob._show()
+##private
+class A:
+    __a="hello this is the private class"#_undersorce is protected
+    def __show(self):
+        print("hello this is private method")
+class B(A):
+    def show2(self):
+        print(super()._a)     
+#ob=B()
+#ob.show2()
+#ob.__show()
+##
+class A:
+    __a="hello this is the private class"#_undersorce is protected
+    def show(self):
+        print(A().__a)
+obj=A()
+obj.show()
+#############
+class All:
+    def __init__(self):
+      self.name="Prathmesh Patil"
+      self._age=35
+      self.__Salary=24242
+    def show(self):
+        print("Inside Class")
+        print("Name:",self.name)
+        print("Age:",self._age)
+        print("Salary",self.__Salary)
+        
+obj=All()
+obj.show()
+#####Dunder method 1
+class A:
+    def __init__(self,name):
+        self.name=name
+    def __str__(self):
+        return f"hello how are you and your name is {self.name} "
+obj=A("Agnivesh")
+print(obj)
+
+##dunder add
+class B:
+    def __init__(self, age):
+        self.age = age
+
+    def __add__(self, others):
+        total = 0
+        for obj in others:
+            total += obj.age
+        return f"Sum of ages {self.age + total}"
+obj3 = B(12)
+obj1 = B(24)
+obj2 = B(32)
+
+print(obj3 + (obj1, obj2))
+
+######### Tearnary even odd 
+a=15
+print("Even")if a%2==0 else print("odd")
+
+l=[i for i  in range (1,21) if i%2==0 ]
+print(l)
+
+D={i:i**2 for i in range(1,21) if i%2==0}
+print(D)
+
+S={ i*i for i in range (1,10)if i%2==0}
+print(S)
+
+#############Abstraction metho
+from abc import ABC,abstractmethod
+class abstract(ABC):
+    @abstractmethod
+    def perimeter(self):
+        pass
+    @abstractmethod
+    def area(self):
+        pass
+class Square (abstract):
+    def __init__(self,side):
+        self.side=side
+    def perimeter(self):
+        print("i have created")
+    def area(self):
+        print("i have created this")
+class Circle (abstract):
+    def __init__(self,radious):
+        self.radious=radious
+    def perimeter(self):
+        print("i have created")
+    def area(self):
+        print("i have created this")
+#obj=Circle(7)
+#obj1=Square(2)
+
