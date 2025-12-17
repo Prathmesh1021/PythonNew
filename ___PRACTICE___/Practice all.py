@@ -740,3 +740,40 @@ sum=0
 for i in a:
  sum=sum+i
 print(sum/len(a))
+
+###Q-Find The Gretest Number in list and also find index 
+a=[12,23,34,236,3734,4,3626,2]
+largest=a[0]
+for i in range(len(a)):
+    if a[i]>largest:
+        largest=a[i]
+        index=i
+print(f"largest value is {largest} and index is {index}")
+
+##Q->Find Second Largest value in the list and also First value 
+a=[12,23,45,5,7,7,64,3,3,35]
+largest=a[0]
+sec_largest=a[0]
+
+for i in a:
+    if i>largest:
+        largest=sec_largest
+        largest=i
+    elif i>sec_largest:
+        sec_largest=i
+        
+print(sec_largest,largest)
+
+##Q-->Check if list is sorted or not 
+a=[12,13,14,15,16]
+for i in range(len(a)-1):
+    if a[i]<a[i+1]:
+        continue
+    else:
+        print("list is not sorted")
+        break
+else:
+    print("list is sorted ")
+        
+        
+        
