@@ -520,83 +520,6 @@ a=[34,34,2,24,35,465,85,6]
 result=filter(lambda x:x if x%2==True else False,a)
 print(list(result))
 
-#####################################################################
-#Q1 Accept two numbers and print the greatest between them
-a=12
-b=34
-
-if a>b:
-    print(f"{a} is greter thean {b}")
-else:
-    print(f"{b} is greter than {a}")
-"""  
-#Question2 ==>Accept two numbers from user and print the greatest number    
-a=int(input("Enter the Frist value:"))
-b=int(input("Enter the second value:"))
-
-if a>b:
-      print(f"{a} is greter thean {b}")
-else:
-    print(f"{b} is greter than {a}")
-    
-#Q3 Accept The Gender From User as character and print the respective greeting meassage (EX:-Good Morning Sir/Madam)
-gen=(input("enter your gender:"))
-
-if gen=="male" or gen=="Male" or gen=="MALE":
-    print("Good morning sir")
-elif gen=="fmail" or gen=="Fmale" or gen =="FMALE":
-    print("good morning madam")
-    
-#Q4 Accept an integer and check whether it is even or odd number
-a=int(input("Enter your Value:"))
-
-if a%2==0:
-    print(f"{a} is EVEN Number ")
-    
-else:
-    print(f"{a} is ODD Number")
-
-#Q5 Accept name and age from user.Cheack if the user is a valid voter or not?EX->Hello Rahul you are a valid voter  
-name=(input("Enter your name :"))
-age=int(input("Enter your age: "))
-
-if a>=18:
-    print(f"hello {name} you are valid voter")
-else:
-    print(f"hello {name} you are not valid voter")
-    
-
-#Question 6==>Accept a year from user and check whether it is a leap year or not?
-year=int(input("Enter your Year: "))
-if year%4==0 or year %400==0 and year%100!=0:
-    print(f"{year} is leap year")
-else:
-    print(f"{year} is not leap year")
-#Question 7==> You cna also create if elif ladder using multiple conditions of elif For understanding solve this question take the input of temperature in celsius.
-# Below 0°C → "Freezing Cold 11
-#0°C to 10°C → "Very Cold
-#10°C to 20°C → "Cold 11
-#20°C to 30°C "Pleasant
-#30°C to 40°C → "Hot
-#Above 40°C → "Very Hot
-
-temp=int(input("enter temprature :"))
-
-if temp<0:
-    print("freezing cool")
-elif temp>0 and temp<10:
-    print("very cold")
-elif temp>10 and temp<20:
-    print("cold")
-elif temp>20 and temp<30:
-    print("pleasent")
-elif temp>30 and temp<40:
-    print("hot")
-elif temp>40:
-    print("very hot")
-else:
-    print("please enter valid value ")
-    """
 #######break Example 
 
 for i in range (1,21):
@@ -913,3 +836,160 @@ print(d)
 d={10:100,20:200,30:300,40:400,50:500}
 x=d.values()
 print(x)
+
+##Ditionary CRUD
+d1={10:100,20:200,30:300,40:400,50:500}
+
+d1[10]=10000  #updating
+d1[60]=232  #creating
+del d1[40]  #deleting
+print(d1)   #read 
+
+###Ditionary calling Key demo 
+d2={10:100,20:200,30:300,40:400,50:500}
+print(d2[40])
+
+###merge two python dict
+d1={10:100,20:200,30:300}
+d2={40:400,50:500}
+
+for i in d2:
+    d1[i] = d2[i]
+print(d1)
+
+#Q2-->Write a program to sum of all values in a dictionary.
+
+d1={10:100,20:200,30:300}
+
+sum=0
+for i in d1:
+    sum=sum+d1[i]
+print(sum)
+##Count of Each element frequency same
+
+a=[1,1,1,1,1,2,2,2,2,3,3,3,4,4,4,4,4,4]
+
+d={}
+
+for i in a:
+    if i in d.keys():
+        d[i] +=1
+    else:
+        d[i] = 1
+print(d)
+
+#Q4-->Write a python program to combine two dictionary by adding valuesfor common keys
+
+d1={10:100,20:200,30:300}
+d2={10:300,30:345,40:700}
+
+for i in d2:
+    if i in d1.keys():
+        d1[i]+=d2[i] 
+    else:
+        d1[i]=d2[i]
+print(d1)
+#sample for Example 
+for i in range(1,90,10):
+    print(i)
+#Example 20 to 50
+for i in range(20,51,1):
+    print(i)
+#Example 16 to -1
+for i in range(16,-2,-1):
+    print(i)
+#Example -1 to -15
+for i in range(-3,-16,-1):
+    print(i)
+#lets print table of 5
+for i in range(5,51,5):
+    print(i)
+#to print using for loop charectors 
+a="rohitkumar"
+for i in range(len(a)):
+    print(a[i])
+#to print using lenght charector 
+b="this is the tiger"
+print(len(b))
+for i in range(len(b)):
+    print(b[i])
+
+
+########################################################################################################
+#Q1 Accept two numbers and print the greatest between them
+a=12
+b=34
+
+if a>b:
+    print(f"{a} is greter thean {b}")
+else:
+    print(f"{b} is greter than {a}")
+    
+#Question2 ==>Accept two numbers from user and print the greatest number    
+a=int(input("Enter the Frist value:"))
+b=int(input("Enter the second value:"))
+
+if a>b:
+      print(f"{a} is greter thean {b}")
+else:
+    print(f"{b} is greter than {a}")
+    
+#Q3 Accept The Gender From User as character and print the respective greeting meassage (EX:-Good Morning Sir/Madam)
+gen=(input("enter your gender:"))
+
+if gen=="male" or gen=="Male" or gen=="MALE":
+    print("Good morning sir")
+elif gen=="fmail" or gen=="Fmale" or gen =="FMALE":
+    print("good morning madam")
+    
+#Q4 Accept an integer and check whether it is even or odd number
+a=int(input("Enter your Value:"))
+
+if a%2==0:
+    print(f"{a} is EVEN Number ")
+    
+else:
+    print(f"{a} is ODD Number")
+
+#Q5 Accept name and age from user.Cheack if the user is a valid voter or not?EX->Hello Rahul you are a valid voter  
+name=(input("Enter your name :"))
+age=int(input("Enter your age: "))
+
+if a>=18:
+    print(f"hello {name} you are valid voter")
+else:
+    print(f"hello {name} you are not valid voter")
+    
+
+#Question 6==>Accept a year from user and check whether it is a leap year or not?
+year=int(input("Enter your Year: "))
+if year%4==0 or year %400==0 and year%100!=0:
+    print(f"{year} is leap year")
+else:
+    print(f"{year} is not leap year")
+#Question 7==> You cna also create if elif ladder using multiple conditions of elif For understanding solve this question take the input of temperature in celsius.
+# Below 0°C → "Freezing Cold 11
+#0°C to 10°C → "Very Cold
+#10°C to 20°C → "Cold 11
+#20°C to 30°C "Pleasant
+#30°C to 40°C → "Hot
+#Above 40°C → "Very Hot
+
+temp=int(input("enter temprature :"))
+
+if temp<0:
+    print("freezing cool")
+elif temp>0 and temp<10:
+    print("very cold")
+elif temp>10 and temp<20:
+    print("cold")
+elif temp>20 and temp<30:
+    print("pleasent")
+elif temp>30 and temp<40:
+    print("hot")
+elif temp>40:
+    print("very hot")
+else:
+    print("please enter valid value ")
+    
+######################################################################################################
