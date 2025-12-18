@@ -775,5 +775,141 @@ for i in range(len(a)-1):
 else:
     print("list is sorted ")
         
-        
-        
+
+##tuple traversing with for i in range 
+
+a=(1,234,4,5,76,5)
+for i in range(len(a)):
+    print(a[i])
+#tuple 
+t=(1,)
+print(type(t))
+t=(1)
+print(type(t))
+
+##tuple direct method 
+t=(1,2,3,4,5,6,7)
+for i in t:
+    print(i)
+    
+##tuple method index
+a=(2,4,5,6,7,8,9)
+index=a.index(5)
+print("index of 5 is :",index)
+
+##count Example 
+a=(12,13,14,15,151,6152,57,15)
+Count=a.count(15)
+print("Count of 15 is:-",Count)
+
+##set Direct value 
+s={12,34,25,47,58,3,74}
+for i in s:
+    print(i)
+##set Methods #add
+s={12,35,356,36,3}
+s.add(1313)
+print(s)
+##remove 
+r={12,35,47,374,235,36}
+r.remove(374)
+print(r)
+##discard
+d={12,132,34,36,74,85,555,43}
+d.discard(132)
+print(d)
+##pop
+s={100,23,4,5,6,7}
+s.pop()
+print(s)
+#clear
+s={12,3,5,6,447,3,}
+s.clear()
+print(s)
+#union set
+s={1,2,3}
+t={3,4,5}
+x=s|t
+x1=s.union(t)
+print(x)
+print(x1)
+##intersaction
+s={1,2,3}
+t={3,4,5}
+x=s&t
+x1=s.intersection(t)
+print(x)
+print(x1)
+##diffrence 
+s={1,2,3,42,42,43}
+t={3,4,5,1,2,97}
+x1=s-t
+print(x1)
+##symmetric 
+s={1,2,3}
+t={3,4,5}
+x=s^t
+print(x)
+##Set with has 
+a=hash("hello")
+print(a)
+b=hash("1131")
+print(b)
+
+##Dictionary traversing 
+D5={10:100,20:200,30:300,40:400,50:500}
+
+for i in D5:
+    print(i)
+for i in D5.values():
+    print(i)
+
+###Dictionary Methods 
+#clear
+D5={10:100,20:200,30:300,40:400,50:500}
+D5.clear()
+print(D5)
+#copy
+d={10:100,20:200,30:300,40:400,50:500}
+d.copy()
+print(d)
+#get
+D5={10:100,20:200,30:300,40:400,50:500}
+x=D5.get(30)
+print(x)
+#iteams
+d={10:100,20:200,30:300,40:400,50:500}
+print(d.items())
+#from key
+x=10,20,30
+y=0
+thisdict=dict.fromkeys(x, y)
+print(thisdict)
+#without value
+x='key1','key2','key3'
+thisd=dict.fromkeys(x, y)
+print(thisd)
+##pop
+d={10:100,20:200,30:300,40:400,50:500}
+d.pop(30)
+print(d)
+##keys
+d={10:100,20:200,30:300,40:400,50:500}
+x=d.keys()
+print(x)
+#pop iteams
+d={10:100,20:200,30:300,40:400,50:500}
+x=d.popitem()
+print(x)
+#setdefault
+d={10:100,20:200,30:300,40:400,50:500}
+x=d.setdefault(60,600)
+print(x)
+##Update
+d={10:100,20:200,30:300,40:400,50:500}
+d.update({60:600})
+print(d)
+#values 
+d={10:100,20:200,30:300,40:400,50:500}
+x=d.values()
+print(x)
