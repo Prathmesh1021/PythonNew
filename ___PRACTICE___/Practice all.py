@@ -913,7 +913,78 @@ b="this is the tiger"
 print(len(b))
 for i in range(len(b)):
     print(b[i])
+    
+##Accept in and print hello world n times
+n=int(input("enter your number for print hello"))
+for i in range(1,n+1):
+    print("hello world")
 
+###Accept input and print number up to n 
+n=int(input("enter the values  :"))
+for i in range(1,n+1):
+    print(i)
+###Reverse number Example 
+n=int(input("Enter the Number for reverse :"))
+for i in range(n,0,-1):
+    print(i)
+###take input and print multilication table 
+n=int(input("Enter the number for Multiplication Table :"))
+for i in range (1,11,1):
+    print(f"{i} * {n} ={i*n}")
+##Sum up to n turms 
+n=int(input("enter value for sum up to value:"))
+sum=0
+for i in range(1,n+1):
+    sum =sum+i
+print(sum)
+### Factorial Series 
+n=int(input("Enter value for factoriual:"))
+fact=1
+for i in range (1,n+1):
+        fact=fact*i
+print(fact)
+##Even odd Sum
+n=int(input("enter your value:"))
+Even =0
+Odd =0
+for i in range(1,n+1):
+    if i%2==0:
+        Even=Even+i
+    else:
+        Odd=Odd+i
+print(f"your Even sum are {Even} and your odd Sum are {Odd}")
+
+#Q Print all the factor of a number 
+n=int(input("Which Number You Want For Factor:"))
+for i in range(1,n+1):
+    if n%i==0:
+     
+     print(f"your Factor is ",i)
+
+#Q Accept a number and Check if it a perfect number or not.
+#A number whose sum of factors is equal to the number itself
+#Ex - 6=1,2,3=6
+
+n=int(input("Enter Your Values"))
+sum=0
+for i in range(1,n):
+    if n%i==0:
+     sum=sum+i
+if sum==n:
+    print("This is the Perfect Number")
+else:
+    print("this is the Not Pefect Number")
+
+#Q Check wether the number is prime or not 
+n=int(input("cheack your number prime or not "))
+count=0
+for i in range(1,n+1):
+    if n%i==0:
+        count=count+1
+if count==2:
+    print("your number is prime ")
+else:
+    print("your number is not prime ")
 
 ########################################################################################################
 #Q1 Accept two numbers and print the greatest between them
