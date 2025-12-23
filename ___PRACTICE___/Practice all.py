@@ -1,114 +1,118 @@
-##class 
-class Factory:
-    a="this is the attributes"
-    def hello(self):
-        print("how are you ")
-print("welcome in class ")
-print(Factory().a)
-Factory().hello()
-##
+######################################################################################################
+
 class Animal:
+    a=12
+    def hello(self):
+        print("hello how are you")
+print("Welcome in class")
+print(Animal().a)
+Animal().hello()
+
+class animal:
     a="dog"
     def sound(self):
         print("bhubhu")
-print(Animal().a)
-Animal().sound()
-##
+print(animal().a)
+animal().sound()
+
 class Car:
-    weel=4
+    wheel=4
     def __init__(self,name):
         self.name=name
     def show(self):
-        print(f"your car name is {self.name}")
-obj=Car("Creta")
+        print(f"hello your car name is {self.name}")
+obj=Car("creta")
 obj.show()
-class factory:
+
+class Factory:
     def __init__(self,age):
         self.age=age
     def show(self):
-        print(f"Your age is :{self.age}")
+        print(f"your age is {self.age}")
     @classmethod
     def class1(cls):
-        print("this is the class method")
+        print("This is the class method")
     @staticmethod
     def static():
-        print("this is the static method")
-        
-obj=factory(12)
+        print("this is the class method")
+obj=Factory(12)
+obj.show()
 obj.class1()
-obj.static()
-
-class Cons:
+obj.static() 
+#####################################################################################
+#Constructors       
+class C:
     def __init__(self,name):
         self.name=name
-s=Cons("riya")
-print(s.name)
+s=C("Riya")
+print(s.name)        
 
-class Cons2:
-    def __init__(self,material,zip,pockets):
+class C2:
+    def __init__(self,material,zip):
         self.material=material
-        self.zip=z=zip
-        self.pockets=pockets
+        self.zip=zip
     def show(self):
-        print(f"Your comany details are :{self.material} ,{self.zip} ,{self.pockets}")
-obj=Cons2("lather",3,3)
+        print(f"details are {self.material} ,{self.zip}")
+obj=C2("Nylone",23)
 obj.show()
-
-##
-class obj:
+#################################################################################
+class object:
     a=12
-    def hello(delf):
-        print("this is the object example")
-print(obj().a)
-obj().hello()
-##
+    def hello(self):
+        print("hello how are you ")
+obj=object()
+print(obj.a)
+obj.hello()
+###################################################################################
+#create a list Example
 x=[]
-y=[12,224,3453,53,36,663]
-z=[23,"Akash",7346.34,"@%@%@",324j,True]
-print(x)
-print(y)
-print(z)
-##
-r=[12,4254,6,743,64742,4,37,2,7,7,5,546]
-r.append(342)
-r.sort()
-print(r)
-##
-mylist=[12,324,25,5,2,25,25,52]
-myval=mylist[0]
+y=[12,24,56,6578,4785,373,36,47]
+z=[13,"uyfweu",344.4634,True,"@#$@%@"]
+print(x  ,y    ,z)
 
+#list method .py
+l=[123,34,254,25,45,68,658,68]
+l.append(3432)
+l.sort()
+print(l)
+
+##create algoritham
+mylist=[12,35,645,2,353,536322,4]
+myval=mylist[0]
 for i in mylist:
     if i<myval:
         myval=i
-        print("lowest value is :",myval)
-## stack 
+print("lowest number", myval)
 
+## 
 stack=[]
 
 stack.append('A')
 stack.append('B')
 stack.append('C')
 stack.append('D')
+stack.append('E')
 
-print("stack:",stack)
+print("Stack",stack)
 
 topelement=stack[-1]
-print("Peek",topelement)
+print("peek",topelement)
 
 popelement=stack.pop()
 print("pop",popelement)
 
-print("after pop stack is ",stack)
+print("After pop stack is :",stack)
 
 isEmpty=not bool(stack)
 print("Empty",isEmpty)
 
 print("size",len(stack))
 
-###
+
 class Stack:
     def __init__(self):
         self.stack=[]
+        
     def push(self,element):
         self.stack.append(element)
     def peek(self):
@@ -119,72 +123,61 @@ class Stack:
         if self.isEmpty():
             return "stack is Empty"
         return self.stack.pop()
-    def isEmpty(self):
+    def isEmpty (self):
         return len(self.stack)==0
-    def size(self):
+    def size (self):
         return len(self.stack)
+
+mystack=Stack()
+
+mystack.push('A')    
+mystack.push('B')    
+mystack.push('C')    
+mystack.push('D')    
+mystack.push('E')
+
+print("stack",mystack.stack)
+print("peek",mystack.peek())
+print("pop",mystack.pop())
+print("After pop Stack is",mystack.stack)
+print("Empty",mystack.isEmpty())
+print("Size",mystack.size())  
+###############################################################
+class parent :
+    a="this is class attributes"
+    def hello(self):
+        print("hello how are you ")
+class child(parent):
+    pass
+obj=child()
+print(obj.a)
+obj.hello()
+
+## Inheritance using super class 
+class Animal:
+    def __init__(self,material,zip,pockets):
+        self.material=material
+        self.zip=zip
+        self.pockets=pockets
+class Human(Animal):
+    def __init__(self, material, zip, pockets,color):
+        super().__init__(material, zip, pockets) 
+        self.color=color
+    def show(self):
+        print(f"Details are {self.material} ,{self.zip} ,{self.pockets}, {self.color}")
+obj=Human("lather",13,34,"black")
+obj.show()
     
-ms=Stack()
-
-ms.push('A')        
-ms.push('B')        
-ms.push('C')        
-ms.push('D')        
-ms.push('E')        
-
-print("Stack:",ms.stack)
-print("Peek",ms.peek())
-print("pop",ms.pop())
-print("after pop stack is ")
-print("Empty",ms.isEmpty())
-print("size",ms.size())
-
-##inheritamce syantax 
+#3single level
 class parent:
     def hello(self):
-        print("hello how are you")
+        print("hello how are you single level inheritance")
 class child(parent):
     pass
 obj=child()
 obj.hello()
 
-##
-class Animal:
-    a="this is attribute"
-    def hello(self):
-        print("this is method")
-class Human(Animal):
-    pass
-obj=Human()
-print(obj.a)
-obj.hello()
-
-#inheritance using super class 
-class Factory:
-    def __init__(self,material,zip):
-        self.material=material
-        self.zip=zip
-class PuneFactory(Factory):
-    def __init__(self, material, zip,pockets):
-        super().__init__(material, zip)
-        self.pockets=pockets
-    def show(self):
-        print(f"Details are :{self.material}, {self.zip}, {self.pockets}")
-
-obj=PuneFactory("later",23,43)
-obj.show()
-## single level
-class Animal:
-    def __init__(self,name):
-        self.name=name
-    def show(self):
-        print(f"Your animal name is {self.name}")
-class Human(Animal):
-    pass
-obj=Human("tiger")
-obj.show()
-
-##Multiple 
+##multilevel inheritance 
 class Animal:
     def __init__(self,name):
         self.name=name
@@ -192,875 +185,521 @@ class Human:
     def __init__(self,name1,age):
         self.name1=name1
         self.age=age
+        
 class Robort(Human,Animal):
     def __init__(self):
-        Animal.__init__(self,"Lion")
-        Human.__init__(self,"Rahul",13)
-obj=Robort() 
+        Animal.__init__(self,"tiger")
+        Human.__init__(self,"Adhira",11)
+obj=Robort()
 print(obj.name)
 print(obj.name1)
 print(obj.age)
 
-
-########multilevel inheritance 
+##multilevel inheritance 
 class Factory:
     def __init__(self,material,zip):
         self.material=material
         self.zip=zip
 class Bhopal(Factory):
     def __init__(self, material, zip,pockets):
-        super().__init__(material, zip)
+        super().__init__(material, zip)        
         self.pockets=pockets
 class Pune(Bhopal):
     def __init__(self, material, zip, pockets,color):
-        super().__init__(material, zip, pockets,)
+        super().__init__(material, zip, pockets)
         self.color=color
     def show(self):
-        print(f"details are :- {self.material} ,{self.zip} ,{self.pockets} ,{self.color}")
-obj=Pune("lather",34,23,"black")
-obj.show()
+        print(f"your comany details are :-{self.material} ,{self.zip} ,{self.pockets} ,{self.color}")
 
-### hierachical 
+obj=Pune("lather",223,34,"blue")
+obj.show()
+#####hier
 class Factory:
     def __init__(self,material,zip,pocket,color):
         self.material=material
         self.zip=zip
         self.pocket=pocket
         self.color=color
-class pune(Factory):
+class Pune(Factory):
     def __init__(self, material, zip, pocket, color):
         super().__init__(material, zip, pocket, color)
     def show(self):
-        print(f"Pune Company Details are:{self.material} ,{self.zip} ,{self.pocket} ,{self.color}")
-class bhopal(Factory):
+        print(f"Pune company details are : {self.material} ,{self.zip} ,{self.pocket}, {self.color}")
+class Mumbai(Factory):
     def __init__(self, material, zip, pocket, color):
-        super().__init__(material, zip, pocket, color)    
-    def show2(self):
-                print(f"Bhopal Company Details are:{self.material} ,{self.zip} ,{self.pocket} ,{self.color}")
-obj1=pune("lather",23,24,"black")
+        super().__init__(material, zip, pocket, color)
+    def show(self):
+        print(f"Pune company details are : {self.material} ,{self.zip} ,{self.pocket}, {self.color}")
+
+obj=Pune("Nylon",23,43,"red")
+obj1=Mumbai("Lather",3,4,"pink")
+
+obj.show()
 obj1.show()
-obj2=bhopal("Nylon",2,4,"Red")
-obj2.show2()
-
-##poly sample example 
+#####################################################################################
+#poly simple Example 
 def show():
-    print("hi")
+    print("Hello")
 def show():
-    print("hello")
-show()
-## poly Method ovverriding 
+    print("Hello how are you")
+show()    
+###poly overriding 
 class Animal:
-    def show1(self):
-        print("hello how are you")
+    def show(self):
+        print("hello how are you and welcome poly")
 class Human(Animal):
-    def show1(self):
-        print("hello what about you ")#method overriding
+    def show(self):
+        print("hello I am fine ")
 obj=Human()
-obj.show1()
-
-##poly 3 Example 
-class A:
+obj.show()
+##Duck typing
+class Animal:
     def show(self):
         print("i am showing")
-class B:
+class Human:
     def show(self):
-        print("i am also Showing")
-        
-obj1=A()
+        print("i am also showing")
+obj=Animal()
+obj.show()
+obj1=Human()
 obj1.show()
-
-obj2=B()
-obj2.show()
-
-## functional Approach 
-def add(a,b):
-    return a+b
-print(add(346,34))
-print(add(341,45))
-##imperative Approach
-a=23
-b=23
-print(a+b)
-##Encapsulation 
-## public Accsess Method 
-class parent:
-    a="this is class Attribute"
-    def show(self):
-        print("this is class method ")
-class child(parent):
+#####################################################################################
+##Encapsulation
+#public
+class Factory:
+    a="this is the class public attributes"
+    def show1(self):
+        print("hello welcome in public method")
+class Pune(Factory):
     def show2(self):
         print(super().a)
-obj=child()
-obj.show()
+obj=Pune()
+obj.show1()
 obj.show2()
-
-##protected
+#protected 
 class Animal:
-    _a="this is protected attribute"
-    def _show(self):
-        print("this is protected method")
+    _b="This is the Protected Attributes"
+    def _show3(self):
+        print("hello welcome in protected Method")
 class Human(Animal):
-    def show2(self):
-        print(super()._a)
+    def _show4(self):
+        print(super()._b)
 obj=Human()
-obj._show()
-obj.show2()
-
-##classs private not accesseble 
-class Factory:
-    __a="this is private class attribute not accesible "
+obj._show3()
+obj._show4()
+#Private not access 
+class Animal:
+    __a="this is the private attributes"
     def __show(self):
-        print("this is private method can not me acceas it ")
-class Pune(factory):
+        print("hello welcome in private method")
+class Human(Animal):
     def show(self):
-        print(super().__a)#Can't access because this on is private Encapsulation 
-#obj=Pune()
-#obj.__show()
-#obj=show()
+        print(super().__a)
+obj=Human()
+#obj.__show() ## not acces private Encapsulation
+#obj.show() ## not acces private Encapsulation
 
-## private acees with class 
-class animal:
-    __b="this one private Attribute"
-    def show4(self):
-        print(animal().__b)
-obj=animal()
-obj.show4()
-
-###public private protected 
+##private access with class 
+class Factory:
+    __a="This is the private Attribute with acsess Class"
+    def show(self):
+        print(Factory().__a)
+obj=Factory()
+obj.show()
+#####Public Protected Private 
 class Factory:
     def __init__(self):
-        self.name="public member "#public
-        self._age=21#Protected
-        self.__Salary=50000#private
-    def show (self):
-        print("Inside the class")
-        print("name",self.name)
-        print("age",self._age)
-        print("Salary",self.__Salary)
-        
-##dander method
+      self.name= " Pritam Das" #public
+      self._age=12 #protected 
+      self.__salary=23000 #private 
+      
+    def show(self):
+        print("inside the class")
+        print("Name:",self.name)
+        print("Age:",self._age)
+        print("Salary:",self.__salary)
+obj=Factory()
+obj.show()
 
-class Factory:
+#################################################################################
+#dunder init str
+class A:
     def __init__(self,name):
         self.name=name
     def __str__(self):
-        return f"hello how are you and your name is {self.name}"
-obj=Factory("Rahul")
-print(obj)
+        return f"hello how are you and your name is {self.name}"     
+obj=A("Rushikesh")
+print(obj)   
 
-##dandar method 
-class Animal:
+###Dunder init and Add
+class B:
     def __init__(self,age):
         self.age=age
-    def __add__(self,other):
+    def __add__(self, other):
         sum=0
         for i in other:
             sum=sum+i.age
-            return "sum of ages is:", {self.age +sum}
-            
-obj=Animal(12)
-obj1=Animal(13)
-obj2=Animal(14)
-print(obj +(obj1,obj2))
+            print("sum of ages are :",self.age +sum)
+obj=B(12)
+obj1=B(10)
+obj2=B(10)
+print(obj+(obj1,obj2))
 
-
-## teernary operator
-a=64
-print("even") if a%2==0 else print("odd")
-
-##Comperehention 
-#list Comperehension 
-l=[i for i in range(1,21) if i%2==0]
+####################################################################################
+#Ternary operators 
+a=11
+print("Even") if a%2==0 else print("odd")
+#####################################################################################
+#comprehensions 
+#list 
+l=[i for i in range(1,31) if i%2==0 ]
 print(l)
-#Dictionary Comperehention
-D={i:i**2 for i in range (1,11)if i%2==0}
-print(D)
-#set Comperehension 
-S={i*i for i in range(1,10) if i%2==0}
-print(S)
-        
-##Abstraction Method Example 
-from abc import ABC, abstractmethod
-class abstract (ABC):
+#Dictionary
+d={i:i**2 for i in range(1,10) if i%2==0}
+print(d)
+#Set
+s={i*i for i in range (1,10) if i%2==0}
+print(s)
+###########################################################################################
+##Abstraction
+from abc import ABC,abstractmethod 
+class abstract(ABC):
     @abstractmethod
     def perimeter(self):
         pass
     @abstractmethod
     def area(self):
         pass
-class Square(abstract):
+class Square (abstract):
     def __init__(self,side):
-        self=side=side
-    def perimeter(self):
-        print("i have created")
+        self.side=side
+    def perimeter (self):
+        print("i have class")
     def area(self):
-        print("i have created this ")
+        print("i have also class")
 class Circle (abstract):
     def __init__(self,radious):
-        self.radious=radious
+        self.redious=radious
     def perimeter(self):
-       print("i have created ")
-    def area (self):
-       print("i have created this ") 
-#obj=Circle(7)
-#obj=Square(4)  
-        
-###Decorator Example 1 --Using Decorator and Wrapper Class 
-
-def decorate(func):
+        print("i have class")
+    def area(self):
+        print("i also have a class")
+obj=Circle(7)
+obj=Square(2)    
+####################################################################################
+#Decorators 
+def decorate (fun):
     def Wrapper():
-        print("before")
-        func()
+        print("Before")
+        fun()
         print("after")
     return Wrapper
 @decorate
 def hello():
-    print("hello i am prathmesh patil")
+    print("hello")
 hello()
-
-###Decorator Example 2__ Addition of two numbers 
-def decorate(func):
-    def Wrapper(a,b):
-        print("before addition")
-        func(a,b)
-        print("after addition")
-    return Wrapper
+#decorator addition using 
+def decorate (func):
+    def wrapper(x,y):
+        print("after")
+        func(x,y)
+        print("before")
+    return wrapper
 @decorate
-def add(a,b):
-    print(f"your addithion is: {a+b}")
-add(12,56)
-
-###Decorator Example 3 --- usinf args addition
+def add(x,y):
+    print(f"Addition is {x+y}")
+add(20,34)
+##Args 
 def addition(*args):
     sum=0
     for i in args:
         sum=sum+i
     print(sum)
-addition(12,20,40,70)   
-
-##decorator Example ---Using Kwargs information details 
+addition(12,23,43,25,25,25,2,52)
+     
+###Kwargs 
 def information(**kwargs):
-    print("your information is :")
+    print("Your Information is")
     for i in kwargs:
         print(f"{i}:{kwargs[i]}")
-    
-information (name="prathmesh",age=23,designation ="Developer",mobile=1213131313)
+information(name="Swapnil",age =28,address="pune")
 
-
-##Decorators Example 5 Args And Kwargs Both 
+######Args Kargs
 def decorate(func):
-    def Wrapper(*args,**kwargs):
-        print("before adddition")
+    def wrapper(*args,**kwargs):
+        print("Your Addition is :")
         func(*args,**kwargs)
-        print("After addition ")
-    return Wrapper
+        print("thank you i hope you like it ")
+    return wrapper    
 @decorate
-def add(a,b,c,d,e,f):
-    print(f"Total is {a+b+c+d+e+f}")
-add(10,20,30,40,50,60)
-
-##Lambda addition operation
-Add=lambda a,b:a+b
-print(Add(12,33)) 
-##Lambada Example 2 Even Odd
-evenodd=lambda c:"even" if c%2==0 else "odd"
-print(evenodd(13)) 
-##map 
+def addition(a,b,c,d,e,f):
+    print(f"Total is{a+b+c+d+e+f}")
+addition(10,20,30,40,50,60)
+######################################################################################
+#lambada sample addition
+add=lambda x,y:x+y
+print(add(13,32))
+##Use Ternary in Lambda 
+a=lambda c:"even"if c%2==0 else "odd"
+print(a(11))
+#########################################################################################
+###map Example1
 a=[1,2,3,4,5,6]
 result=map(lambda x:x*2,a)
 print(list(result))
-##map2
-b=[1,2,3,4,5,6]
-def double(x):
-    return x*2
-result=map(double,b)
-print(list(result))
-#filter
-def even(x):
-    if x%2==0:
-        return True
-    else:
-        return False
-a=[1,2,3,4,5,6,7,8,9]
-result=filter(even,a)
-print(list(result))
-#filter 2
-a=[1,2,3,4,5,6,7,8,9]
-result=filter(lambda c:c if c%2==True else False,a)
-print(list(result))
-
-##Addition Using Lambada 
-addition=lambda a,b:a+b
-print(addition(12,32))
-##use ternary operation in lambada add check even odd 
-evenodd=lambda x: "even" if x%2==0 else "odd"
-print(evenodd(32))
-##map using squre of lists 
-a=[1,2,3,4,5,6,7]
-result=map(lambda x:x*2,a)
-print(list(result))
-##map2 traditional method 
-a=[7,6,5,4,3,2,1]
+###map normal method
+a=[1,2,3,4,5]
 def double(x):
     return x*2
 result=map(double,a)
 print(list(result))
-##filter method using ======>even odd operations 
+#############################################################################################
+# Filter Normal Function 
 def even(x):
     if x%2==0:
         return True
     else:
         return False
-a=[1,2,3,4,5,6,7,8,9,8,7,6,5,4,3,2,1]
+a=[1,2,3,4,5,6,7,8,9]
 result=filter(even,a)
 print(list(result))
-
-##filter 2
-a=[34,34,2,24,35,465,85,6]
-result=filter(lambda x:x if x%2==True else False,a)
+##Filter with lambda 
+a=[1,2,3,4,5,6]
+result=filter(lambda x:x if x%2==True else False,a )
 print(list(result))
+####################################################################################
+##Data Types
+##Numbric Values 
+a=10
+b=12.3
+d="342"
+e=34j
+print(type(a))
+print(type(b))
+print(type(d))
+print(type(e))
 
-#######break Example 
+##Boolen Values 
+a=True
+b=False
+print(type(a))
+print(type(b))
 
-for i in range (1,21):
-    if i==5:
-     break
+##String 
+a="Hello How are you"
+b="A"
+print(ord(b))
+d=86
+print(chr(d))
+e="Rushikesh Power"
+print(e[6])#Indexing
+print(e[2:7:1])#slicing
+####################################################################################
+####Type conversion 
+#int to str 
+a=12
+a=str(a)
+print(type(a))
+
+#str to int 
+b="23"
+b=int(b)
+print(type(b))
+
+##for boolean 
+a=10
+print(bool(a))
+b=12.3
+print(bool(b))
+c="narendra"
+print(bool(c))
+d=0
+print(bool(d))
+e=12j
+print(bool(e))
+f=[]
+print(bool(f))
+g={}
+print(bool(g))
+#######################################################################################
+#Input Output
+#formated string
+name="Prathmesh Patil"
+age=23
+print(f"Hello {name} your age is {age}")
+
+##non formated String 
+name="akash mulik"
+age=12
+print(f"hello ",name,"your age is ",age)
+
+##traking input from user 
+#name=(input("Enter your Name "))
+#age=int(input("enter your age "))
+print(f"your name is {name} and your age is {age}")
+###########################################################################################
+### arithmatic operations 
+a=10
+b=5
+print("Addition",a+b)
+print("Addition",a-b)
+print("Addition",a*b)
+print("Addition",a/b)
+print("Addition",a//b)
+print("Addition",a**b)
+
+##Assignmesnt 
+a==10
+print(a)
+
+##compound 
+a=10
+print(a)
+a+=20
+print(a)
+a-=2
+print(a)
+a*=2
+print(a)
+a/=2
+print(a)
+a**2
+print(a)
+
+#comparision 
+a=12
+b=12.1
+print(a>b)
+print(a<b)
+print(a!=b)
+print(a<=b)
+print(a>=b)
+print(a>10)
+print(a<10)
+print(ord("A"))
+print(ord("B"))
+##logical operator 
+print(12>232 and 122>43 and 22432>4342423)
+print(12>2 and 35432>4534 and 43<3434)
+print(2134>4534 or 24<4 or 643<432)
+print(232425>452 or 342525<525 or 2334>521)
+print(not 232>342 )
+print(not 232<342 )
+####################################################################################
+#Conditional Statement 
+##gretest number 
+a=13
+b=12
+if a>b:
+    print(f"{a} is grether than {b}")
+else:
+    print(f"{b} is grether than {a}")
+
+##input from user 
+a=int(input("Enter your First Number:"))
+b=int(input("Enter your Second Number:"))
+
+if a>b:
+    print(f"{a} is grether than {b}")
+else:
+    print(f"{b} is grether than {a}")
+    
+##gender 
+gen=(input("Enter Your Gender :"))
+
+if gen == "male" or gen =="Male" or gen=="MALE":
+    print("Hello Good Morning Sir")
+elif gen == "fmale" or gen =="Fmale" or gen=="FMALE":
+    print("Good Morniung Madam")
+else:
+    print("Enter valid value")
+
+##Check even odd from user
+n=int(input("Enter your Number:"))
+if n%2==0:
+    print("Even")
+else:
+    print("odd")
+
+##Voter valid or not 
+name=(input("Enter your name :"))
+age=int(input("Enter your age:"))
+
+if age>=18:
+    print(f"hello {name} you are valid voter")
+else:
+    print(f"Sorry {name} you are not valid voter ")
+    
+#cleap or not 
+year=int(input("Enter your year:"))
+
+if year%4==0 and year%400==0 and year%100!=0:
+    print(f"{year }Leap Year")
+else:
+    print(f"{year} is not a leap year ")
+#elif ladder 
+temp=int(input("Enter your temparature :"))
+
+if temp<0:
+    print("Frezzing cool")
+elif temp>0 and temp<10:
+    print("Very Cool")
+elif temp>10 and temp<20:
+    print("Cool")
+elif temp>20 and temp<30:
+    print("normal")
+elif temp>30 and temp<40:
+    print("hot")
+elif temp<40:
+    print("Very Hot")   
+###################################################################################
+##break 
+for i in range (1,24):
+    if i==8:
+        break
     print(i)
-
-#######continue
-
-for i in range (1,12):
-    if i ==4:
+##continue
+for i in range(1,25):
+    if i==15:
         continue
     print(i)
-    
-##sample function
+######################################################################################
+##function 
+#sample function Structure 
 def hello():
-    print("hello i am sample Function")
+    print("hello world")
 hello()
-
-##using Argument Function
+##Using Argument Addition
 def add(a,b):
-    print(f"Addition: {a+b}")
-add(12,23)
-
-#keyword Argument
-def info(name,age):
+    print(f"Addition {a+b}")
+add(12,32)
+##keyword Argument 
+def hello(name,age):
+    print(f"your name is {name} and age is {age}")
+hello("sudhir",12)
+##Default keyword
+def info(name,age=23):
     print(f"hello {name} and your age is {age}")
-info(name="akash",age="21")
-
-##default function 
-def info2(name,age=12):
-    print(f"hello {name} and your age is {age}")
-info2(name="Rohit")
-
-##Pallendrome Example 
-def pallendrome(st):
+info("Govind")
+##pallindrome 
+def pallindrome(st):
     rev=""
     for i in range (len(st)-1,-1,-1):
-        rev=rev+st[i]
+        rev=rev+st[i]  
     if rev==st:
         print(f"{st} is pallendrome")
     else:
         print(f"{st} is not pallendrome")
         
-pallendrome("naman")
-pallendrome("sakshi")
-pallendrome("anam")
-pallendrome("123456789987654321")
+pallindrome("naman")
+pallindrome("sakshi")
+pallindrome("anam")
+pallindrome("123456789987654321")  
+
+#function with return 
+def sub(a,b):
+    return f"Substraction {a-b}"
+print(sub(12,2))
+    
         
-## function with rerurn 
-def add(a,b):
-    return f"Addition {a+b}"
-print(add(12,34))
-
-###list indexing 
-l=[12,34,45,5786,5,4,35]
-print(l[5])
-print(l[-4])
-
-##list Traversing Foor Loop
-a=[12,23,54,76,89,887]
-for i in range(len(a)):
-    print(a[i])
-    
-##list Traversing Direct Values
-c=[12,234,25,2,63,6,734,74,633]
-for i in c:
-    print(i)
-    
-##Append list 
-a=[12,34,47,5,3,3]
-a.append(-232)
-print(a)
-
-##INSERT LIST 
-b=[12,56,57,97,365,54,97,53,25,59,97]
-b.insert(4,342424)
-print(b)
-
-##extend
-l=[23,56,96,3,68,2]
-l.extend([10,20,30,40,50])
-print(l)
-
-##remove
-h=[13,5675,95,346,2536,585,364875]
-h.remove(13)
-print(h)
-
-##pop
-l=[12,45,75,83,4785,58,5,5,5,8558]
-pop_iteam=l.pop(7)
-print(pop_iteam)
-print(l)
-
-###index
-a=[2,5,9,5,85,3]
-index=a.index(9)
-print(index)
-
-##count
-b=[12,35,36,12,35,75,12]
-c=b.count(12)
-print(c)
-
-##Sort
-v=[13,6,7,895,3466,63,479,65,36]
-v.sort()
-print(v)
-
-##Reverse 
-
-r=[12,34,46,7,8,5,46,6,23,4]
-r.reverse()
-print(r)
-
-##new 
-n=[12,34,56,7,6,34,8]
-new=n.copy()
-print(new)
-
-##clear 
-k=[45,53,56,36,22,5,6,3,36,66,32,255455654,43434,54,235454,345645,346]
-k.clear()
-print(k)
-
-#### Q1-->Print Positive and negative elements of an List
-l=[1,42,-4,6,4,-45,453,-44,-44]
-
-for i in l:
-    if i>=0:
-        print(f"positive numbers {i}")
         
-for i in l:
-    if i<0:
-        print(f"negative numbers {i}")
-        
-##Q-Mean of the list 
-a=[1,2,3,4,5,6,7,8,9]
-sum=0
-for i in a:
- sum=sum+i
-print(sum/len(a))
-
-###Q-Find The Gretest Number in list and also find index 
-a=[12,23,34,236,3734,4,3626,2]
-largest=a[0]
-for i in range(len(a)):
-    if a[i]>largest:
-        largest=a[i]
-        index=i
-print(f"largest value is {largest} and index is {index}")
-
-##Q->Find Second Largest value in the list and also First value 
-a=[12,23,45,5,7,7,64,3,3,35]
-largest=a[0]
-sec_largest=a[0]
-
-for i in a:
-    if i>largest:
-        largest=sec_largest
-        largest=i
-    elif i>sec_largest:
-        sec_largest=i
-        
-print(sec_largest,largest)
-
-##Q-->Check if list is sorted or not 
-a=[12,13,14,15,16]
-for i in range(len(a)-1):
-    if a[i]<a[i+1]:
-        continue
-    else:
-        print("list is not sorted")
-        break
-else:
-    print("list is sorted ")
-        
-
-##tuple traversing with for i in range 
-
-a=(1,234,4,5,76,5)
-for i in range(len(a)):
-    print(a[i])
-#tuple 
-t=(1,)
-print(type(t))
-t=(1)
-print(type(t))
-
-##tuple direct method 
-t=(1,2,3,4,5,6,7)
-for i in t:
-    print(i)
-    
-##tuple method index
-a=(2,4,5,6,7,8,9)
-index=a.index(5)
-print("index of 5 is :",index)
-
-##count Example 
-a=(12,13,14,15,151,6152,57,15)
-Count=a.count(15)
-print("Count of 15 is:-",Count)
-
-##set Direct value 
-s={12,34,25,47,58,3,74}
-for i in s:
-    print(i)
-##set Methods #add
-s={12,35,356,36,3}
-s.add(1313)
-print(s)
-##remove 
-r={12,35,47,374,235,36}
-r.remove(374)
-print(r)
-##discard
-d={12,132,34,36,74,85,555,43}
-d.discard(132)
-print(d)
-##pop
-s={100,23,4,5,6,7}
-s.pop()
-print(s)
-#clear
-s={12,3,5,6,447,3,}
-s.clear()
-print(s)
-#union set
-s={1,2,3}
-t={3,4,5}
-x=s|t
-x1=s.union(t)
-print(x)
-print(x1)
-##intersaction
-s={1,2,3}
-t={3,4,5}
-x=s&t
-x1=s.intersection(t)
-print(x)
-print(x1)
-##diffrence 
-s={1,2,3,42,42,43}
-t={3,4,5,1,2,97}
-x1=s-t
-print(x1)
-##symmetric 
-s={1,2,3}
-t={3,4,5}
-x=s^t
-print(x)
-##Set with has 
-a=hash("hello")
-print(a)
-b=hash("1131")
-print(b)
-
-##Dictionary traversing 
-D5={10:100,20:200,30:300,40:400,50:500}
-
-for i in D5:
-    print(i)
-for i in D5.values():
-    print(i)
-
-###Dictionary Methods 
-#clear
-D5={10:100,20:200,30:300,40:400,50:500}
-D5.clear()
-print(D5)
-#copy
-d={10:100,20:200,30:300,40:400,50:500}
-d.copy()
-print(d)
-#get
-D5={10:100,20:200,30:300,40:400,50:500}
-x=D5.get(30)
-print(x)
-#iteams
-d={10:100,20:200,30:300,40:400,50:500}
-print(d.items())
-#from key
-x=10,20,30
-y=0
-thisdict=dict.fromkeys(x, y)
-print(thisdict)
-#without value
-x='key1','key2','key3'
-thisd=dict.fromkeys(x, y)
-print(thisd)
-##pop
-d={10:100,20:200,30:300,40:400,50:500}
-d.pop(30)
-print(d)
-##keys
-d={10:100,20:200,30:300,40:400,50:500}
-x=d.keys()
-print(x)
-#pop iteams
-d={10:100,20:200,30:300,40:400,50:500}
-x=d.popitem()
-print(x)
-#setdefault
-d={10:100,20:200,30:300,40:400,50:500}
-x=d.setdefault(60,600)
-print(x)
-##Update
-d={10:100,20:200,30:300,40:400,50:500}
-d.update({60:600})
-print(d)
-#values 
-d={10:100,20:200,30:300,40:400,50:500}
-x=d.values()
-print(x)
-
-##Ditionary CRUD
-d1={10:100,20:200,30:300,40:400,50:500}
-
-d1[10]=10000  #updating
-d1[60]=232  #creating
-del d1[40]  #deleting
-print(d1)   #read 
-
-###Ditionary calling Key demo 
-d2={10:100,20:200,30:300,40:400,50:500}
-print(d2[40])
-
-###merge two python dict
-d1={10:100,20:200,30:300}
-d2={40:400,50:500}
-
-for i in d2:
-    d1[i] = d2[i]
-print(d1)
-
-#Q2-->Write a program to sum of all values in a dictionary.
-
-d1={10:100,20:200,30:300}
-
-sum=0
-for i in d1:
-    sum=sum+d1[i]
-print(sum)
-##Count of Each element frequency same
-
-a=[1,1,1,1,1,2,2,2,2,3,3,3,4,4,4,4,4,4]
-
-d={}
-
-for i in a:
-    if i in d.keys():
-        d[i] +=1
-    else:
-        d[i] = 1
-print(d)
-
-#Q4-->Write a python program to combine two dictionary by adding valuesfor common keys
-
-d1={10:100,20:200,30:300}
-d2={10:300,30:345,40:700}
-
-for i in d2:
-    if i in d1.keys():
-        d1[i]+=d2[i] 
-    else:
-        d1[i]=d2[i]
-print(d1)
-#sample for Example 
-for i in range(1,90,10):
-    print(i)
-#Example 20 to 50
-for i in range(20,51,1):
-    print(i)
-#Example 16 to -1
-for i in range(16,-2,-1):
-    print(i)
-#Example -1 to -15
-for i in range(-3,-16,-1):
-    print(i)
-#lets print table of 5
-for i in range(5,51,5):
-    print(i)
-#to print using for loop charectors 
-a="rohitkumar"
-for i in range(len(a)):
-    print(a[i])
-#to print using lenght charector 
-b="this is the tiger"
-print(len(b))
-for i in range(len(b)):
-    print(b[i])
-    
-##Accept in and print hello world n times
-n=int(input("enter your number for print hello"))
-for i in range(1,n+1):
-    print("hello world")
-
-###Accept input and print number up to n 
-n=int(input("enter the values  :"))
-for i in range(1,n+1):
-    print(i)
-###Reverse number Example 
-n=int(input("Enter the Number for reverse :"))
-for i in range(n,0,-1):
-    print(i)
-###take input and print multilication table 
-n=int(input("Enter the number for Multiplication Table :"))
-for i in range (1,11,1):
-    print(f"{i} * {n} ={i*n}")
-##Sum up to n turms 
-n=int(input("enter value for sum up to value:"))
-sum=0
-for i in range(1,n+1):
-    sum =sum+i
-print(sum)
-### Factorial Series 
-n=int(input("Enter value for factoriual:"))
-fact=1
-for i in range (1,n+1):
-        fact=fact*i
-print(fact)
-##Even odd Sum
-n=int(input("enter your value:"))
-Even =0
-Odd =0
-for i in range(1,n+1):
-    if i%2==0:
-        Even=Even+i
-    else:
-        Odd=Odd+i
-print(f"your Even sum are {Even} and your odd Sum are {Odd}")
-
-#Q Print all the factor of a number 
-n=int(input("Which Number You Want For Factor:"))
-for i in range(1,n+1):
-    if n%i==0:
-     
-     print(f"your Factor is ",i)
-
-#Q Accept a number and Check if it a perfect number or not.
-#A number whose sum of factors is equal to the number itself
-#Ex - 6=1,2,3=6
-
-n=int(input("Enter Your Values"))
-sum=0
-for i in range(1,n):
-    if n%i==0:
-     sum=sum+i
-if sum==n:
-    print("This is the Perfect Number")
-else:
-    print("this is the Not Pefect Number")
-
-#Q Check wether the number is prime or not 
-n=int(input("cheack your number prime or not "))
-count=0
-for i in range(1,n+1):
-    if n%i==0:
-        count=count+1
-if count==2:
-    print("your number is prime ")
-else:
-    print("your number is not prime ")
-
-########################################################################################################
-#Q1 Accept two numbers and print the greatest between them
-a=12
-b=34
-
-if a>b:
-    print(f"{a} is greter thean {b}")
-else:
-    print(f"{b} is greter than {a}")
-    
-#Question2 ==>Accept two numbers from user and print the greatest number    
-a=int(input("Enter the Frist value:"))
-b=int(input("Enter the second value:"))
-
-if a>b:
-      print(f"{a} is greter thean {b}")
-else:
-    print(f"{b} is greter than {a}")
-    
-#Q3 Accept The Gender From User as character and print the respective greeting meassage (EX:-Good Morning Sir/Madam)
-gen=(input("enter your gender:"))
-
-if gen=="male" or gen=="Male" or gen=="MALE":
-    print("Good morning sir")
-elif gen=="fmail" or gen=="Fmale" or gen =="FMALE":
-    print("good morning madam")
-    
-#Q4 Accept an integer and check whether it is even or odd number
-a=int(input("Enter your Value:"))
-
-if a%2==0:
-    print(f"{a} is EVEN Number ")
-    
-else:
-    print(f"{a} is ODD Number")
-
-#Q5 Accept name and age from user.Cheack if the user is a valid voter or not?EX->Hello Rahul you are a valid voter  
-name=(input("Enter your name :"))
-age=int(input("Enter your age: "))
-
-if a>=18:
-    print(f"hello {name} you are valid voter")
-else:
-    print(f"hello {name} you are not valid voter")
-    
-
-#Question 6==>Accept a year from user and check whether it is a leap year or not?
-year=int(input("Enter your Year: "))
-if year%4==0 or year %400==0 and year%100!=0:
-    print(f"{year} is leap year")
-else:
-    print(f"{year} is not leap year")
-#Question 7==> You cna also create if elif ladder using multiple conditions of elif For understanding solve this question take the input of temperature in celsius.
-# Below 0°C → "Freezing Cold 11
-#0°C to 10°C → "Very Cold
-#10°C to 20°C → "Cold 11
-#20°C to 30°C "Pleasant
-#30°C to 40°C → "Hot
-#Above 40°C → "Very Hot
-
-temp=int(input("enter temprature :"))
-
-if temp<0:
-    print("freezing cool")
-elif temp>0 and temp<10:
-    print("very cold")
-elif temp>10 and temp<20:
-    print("cold")
-elif temp>20 and temp<30:
-    print("pleasent")
-elif temp>30 and temp<40:
-    print("hot")
-elif temp>40:
-    print("very hot")
-else:
-    print("please enter valid value ")
-    
-######################################################################################################
