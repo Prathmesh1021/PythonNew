@@ -887,4 +887,175 @@ print(c)
 #hash 
 a=hash ("hello")
 print(hash)
+#####################################################################################D
+# dictionary Example for i in 
+d={1:10,2:20,3:30,4:40,5:50}
+for i in d:
+    print(i,":",d[i])
+##Dictionary clear
+d={1:10,2:20,3:30,4:40,5:50}
+d.clear()
+print(d)
+##copy Dictionary
+d={1:10,2:20,3:30,4:40,5:50}
+d.copy()
+print(d)
+##get 
+d={1:10,2:20,3:30,4:40,5:50}
+x=d.get(5)
+print(x)
+##items 
+d={1:10,2:20,3:30,4:40,5:50}
+print(d.items())
+##pop 
+d={1:10,2:20,3:30,4:40,5:50}
+d.pop(2)
+print(d)
 
+#fromkey 
+x={'key1','key2','key3','key4'}
+y=""
+a=dict.fromkeys(x, y)
+print(a)
+#keys
+d={1:10,2:20,3:30,4:40,5:50}
+x=d.keys()
+print(x)
+#pop iteams 
+d={1:10,2:20,3:30,4:40,5:50}
+d.popitem()
+print(d)
+#setdefault
+d={1:10,2:20,3:30,4:40,5:50}
+x=d.setdefault(5)
+print(x)
+###update 
+d={1:10,2:20,3:30,4:40,5:50}
+d.update({4:40000000})
+print(d)
+##values 
+d={1:10,2:20,3:30,4:40,5:50}
+x=d.values()
+print(x)
+
+#Dictionary assignments
+#Q-->merge two pytjon Dictionary 
+d={1:10,2:20}
+d1={3:30,4:40,5:50}
+
+for i in d1:
+    d[i]=d1[i]
+print(d)
+
+#Q-->sum of the all values in dict 
+d1={3:30,4:40,5:50}
+sum=0
+for i in d1:
+    sum=sum+d1[i]
+print(sum)
+
+#Q-->Count the Frequency of the each element in a list
+a=[1,1,1,2,2,2,3,3,3,4,4,5,5,6,6,6,7,8,9]
+b={}
+
+for i in a:
+    if i in b.keys():
+        b[i]+=1
+    else:
+        b[i]=1
+print(b)
+
+#Q4-->Write a python program to combine two dictionary by adding valuesfor common keys
+d1={10:100,20:200,30:300}
+d2={10:300,30:345,40:700}
+
+for i in d2:
+    if i in d1.keys():
+        d1[i]+=d2[i]
+    else:
+         d1[i]=d2[i]
+print(d1)
+##########################################################################################
+####For Loop 
+# sample Example 
+for i in range(1,32):
+    print(i)
+#20 to 50
+for i in range(20,51,1):
+    print(i)
+#16 to -1 
+for i in range(16,-2,-1):
+    print(i)
+#-3 to -15
+for i in range(-3,-16,-1):
+    print(i)
+#lets print the table of 5
+for i in range(5,51,5):
+    print(i)
+#For loop using print charector 
+a="prathmesh patil"
+for i in range(len(a)):
+    print(a[i])
+##uding lenght 
+b="Prathmesh is the boy"
+print(len(b))
+for i in range(len(b)):
+    print(b[i])
+    
+##Accept input from user and print multiplication table 
+n=int(input("Enter your Number which you want table :"))
+
+for i in range(n,n*10+1,n):
+    print(i)
+
+### For Loop Assignment
+##Q-->Accept input and print n times hello
+n=int(input("enter your number which you print Hello :"))
+for i in range(1,n+1,1):
+    print("hello")
+
+##Accept input from user and print numbers up to n
+n=int(input("Enter your number :"))
+for i in range(1,n+1,1):
+    print(i)
+    
+##Reverse number Example
+n=int(input("Enter your Nuymber Which you want reverse :"))
+for i in range (n,0,-1):
+    print(i)
+    
+##Take input print multiplication table 
+n=int(input("Enter table Number:"))
+for i in range (1,11,1):
+    print(f"{n} * {i} = {n*i}")
+    
+## sum up to n numbers 
+n=int(input("Enter the numbers which you want to sum :"))
+sum=0
+for i in range(1,n+1,):
+    sum=sum+i
+print(sum)    
+
+##factorial number
+n=int(input("Entern your numbers for Factorial:"))
+fact=1
+for i in range(1,n+1):
+    fact=fact*i
+print(fact)
+
+##Print sum of Even And odd in range separetly
+n=int(input("Enter Your Number:"))
+Even=0
+Odd=0
+for i in range(1,n+1):
+    if i%2==0:
+        Even = Even +i
+    else:
+        Odd =Odd + i    
+print(f"Your Even Sum is {Even} and Your Odd Sum is {Odd}")
+
+##Print All Factorial 
+n=int(input("Enter your Number for Find Factorial number :"))
+for i in range (1,n+1):
+    if n%i==0:
+     print(f"Your Factorial Number is",i )
