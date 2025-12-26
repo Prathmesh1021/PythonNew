@@ -587,7 +587,8 @@ print(not 232>342 )
 print(not 232<342 )
 ####################################################################################
 #Conditional Statement 
-##gretest number 
+##gretest number
+""" 
 a=13
 b=12
 if a>b:
@@ -651,7 +652,7 @@ elif temp>20 and temp<30:
 elif temp>30 and temp<40:
     print("hot")
 elif temp<40:
-    print("Very Hot")   
+    print("Very Hot")   """
 ###################################################################################
 ##break 
 for i in range (1,24):
@@ -700,6 +701,190 @@ pallindrome("123456789987654321")
 def sub(a,b):
     return f"Substraction {a-b}"
 print(sub(12,2))
-    
-        
-        
+#####################################################################################
+#data Structure 
+#list Traversing 
+#indexing
+l=[12,13,14,151,561,5132,34]
+print(l[2])
+#with for loop indexing 
+print("*************")
+m=[12,2,3,465,74,4,84,2,274,34]
+for i in range (len(m)):
+    print(m[i])
+#Direct for loop Method 
+print("*************")
+n=[1,2,3,4,5,6,7,8,9]
+for i in n:
+    print(i)
+#append
+l=[1,2,4,6,6,2]
+l.append(9)
+print(l)
+#insert
+l=[1,2,4,6,6,2]
+l.insert(2,20)
+print(l)
+#extend
+l=[1,2,4,6,6,2]
+l.extend([10,20,30])
+print(l)
+#remove 
+a=[1,2,4,6,6,2]
+a.remove(1)
+print(a)
+#pop iteam
+l=[1,2,4,6,6,2]
+pop_iteam=l.pop(4)
+print(pop_iteam)
+#index
+l=[3,3434,25,24,32575,3634,32546]
+index=l.index(24)
+print(index)
+#count
+c=[1,23,5,685,47,5,36,1,1,1,1,1,1,1,1]
+count_1=c.count(1)
+print(count_1)
+#sort
+s=[1,4,2,7,2,64,3566]
+s.sort()
+print(s)
+#reverse
+r=[1,6,2,89,3,5,8,532,356,36,346,17,93]
+r.reverse()
+print(r)
+#new 
+n=[1,24,6,73,653,36,36,63]
+new=n.copy()
+print(new)
+#clear
+l=[12,34,36,25,3647,3,8,4,5,7,87,4,3,7,4,74,7]
+l.clear()
+print(l)
+
+###List Assignments 
+##positive and negative numbers 
+l=[1,-1,32,-34,2,-3,5,-3]
+ 
+for i in l:
+    if i>=0:
+        print(f"{i} is positive number")
+for i in l:
+    if i<0:
+        print(f"{i} is Negative Number")
+##mean of the list
+l=[1,2,3,4,5,6]
+sum =0
+for i in range (len(l)):
+    sum=sum+i
+print(f"mean of the list is {sum/len(l)}")
+
+##Find gretest element of the list and print its index 
+l=[1,2,3,4,25,6,7,8,9]
+largest=0
+for i in range(len(l)):
+    if l[i]>largest:
+        largest=l[i]
+        index=i
+print(f"your largest number is {i} and your index is {index}")  
+
+##Find the largest Second largest number
+l=[1,3,2,4,5]
+largest=l[0]
+sec_largest=l[0]
+for i in l:
+    if i>largest:
+        sec_largest=largest
+        largest=i
+    elif i>sec_largest:
+       sec_largest=i       
+print(sec_largest,largest)
+###check if list sorted or not sorted 
+a=[10,11,12,13,14,15,16,17,18]
+
+for i in range(len(a)-1):
+    if a[i]<a[i+1]:
+        continue
+    else:
+        print(f"{a} this list is Sorted")
+        break
+else:
+    print(f"{a} this list is not Sorted ")
+#########################################################################################
+##Tuple Traversing
+#Index For Loop
+a=(1,2,3,4,5,6,7,8,9)
+for i in range(len(a)):
+    print(a[i])
+#Direct ValuesS
+print("******************")
+b=(9,8,7,5,3,1,6)
+for i in b:
+    print(i)
+###tuple methods 
+# index 
+print("******************")
+a=(12,12,24,345,354,36,24,56,85,9870)
+indext=a.index(56)
+print(indext)
+#count
+print("*******************")
+t=(1,2,3,4,74,47,5,2,853,52,574)
+count_2=t.count(2)
+print(count_2)
+#####################################################################################
+#set Sirect value 
+print("******************")
+s={1,2,3,4,5,6,7,8,9}
+for i in s:
+    print(i)
+##set add
+s={1,5,2,7,3}
+s.add(12)
+print(s)
+#set discard 
+s={1,2,4,6,8,4,7}
+s.discard(8)
+print(s)
+#set remove 
+s={1,43,6,23,9,7,6,2}
+s.remove(43)
+print(s)
+#pop set 
+s={1,2,3,4,5,6,7}
+s.pop()
+print(s)
+
+#clear
+s={1,3,5,3,6,3,4,8,9}
+s.clear()
+print(s) 
+
+#union 
+a={1,2,3}
+b={3,4,5}
+union=a|b
+print(union)
+
+#insection
+a={1,2,3}
+b={3,4,5}
+s=a&b
+print(s)
+
+#diffrence 
+a={1,2,3}
+b={3,4,5}
+s=a-b
+print(s)
+
+##symmetric 
+a={1,2,3}
+b={3,4,5}
+c=a^b
+print(c)
+
+#hash 
+a=hash ("hello")
+print(hash)
+
