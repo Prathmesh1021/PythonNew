@@ -375,28 +375,28 @@ class Circle (abstract):
 #Sample Example Print 
 def decorate (func):
     def wrapper():
-        print("Before the Print")
-        func()  
-        print("After the Print")
+        print("After hello ")
+        func()
+        print("Before hello")
     return wrapper
 @decorate
 def hello():
-    print("hello i am prathmesh")
+    print("hello Rushikesh")
 hello()
-
 #Addition of 2 Example Using Decorators 
 print("********************")
 def decorate (func):
     def wrapper(a,b):
-        print("Before the Print")
-        func(a,b)  
-        print("After the Print")
+        print("After hello ")
+        func(a,b)
+        print("Before hello")
     return wrapper
 @decorate
 def hello(a,b):
-    print(f"Addition is : {a+b}")
-hello(12,34)
+    print(f"Addition is {a+b}")
+hello(10,20)
 #Args
+print("*****************")
 def add(*args):
     sum=0
     for i in args:
@@ -404,5 +404,254 @@ def add(*args):
     print(sum)
 add(1,2,3,4,5,6,7,8,9)
 #kwargs
+print("****************")
 def information(**kwargs):
     print("your information is ")
+    for i in kwargs:
+        print(f"{i}:{kwargs[i]}")
+information(name="Rushikesh",age=12,salary="25000")
+##Args Kwargs both
+print("***********")
+def add(*args):
+    sum=0
+    for i in args:
+        sum=sum+i
+    print(sum)
+add(10,20,30,50)
+print("**********")
+def decorate (func):
+    def wrapper(*args,**kwargs):
+        print("After Addition")
+        func(*args,**kwargs)
+        print("Before Addition")
+    return wrapper
+@decorate
+def addition(a,b,c,d,e):
+    print(f"Total addtion is :{a+b+c+d+e}")
+addition(10,20,30,40,50)
+print("********************")
+#################################################################################
+##Lambda Add Two Values 
+a=lambda x,y:x+y 
+print(a(12,34))
+
+##Lambada Even odd 
+EO=lambda x: "Even" if x%2==0 else "Odd"
+print(EO(12))
+#################################################################################
+##Map Square root of values 
+"""a=[1,2,3,4,5,6]
+result=map(lambda x:x*2,a)
+print(list(result))
+"""
+#Map Square Root Normal Method 
+"""
+a=[1,2,3,4,5]
+def double(x):
+    return x*2
+result=map(double,a)
+print(list(result))
+"""
+###############################################################################
+#Noramla Filter Method
+""" 
+def even(x):
+    if x%2==0:
+       return True
+    else:
+        return False
+a=[1,2,3,4,5,6,7,8,9]
+re=filter(even,a)
+print(list(re))
+"""
+#Filter with lambda 
+"""
+a=[1,2,3,4,5,6,7,8,9]
+result=filter(lambda x:x if x%2==True else False,a)
+print(list(result))
+"""
+#################################################################################
+#Data Types 
+#Numberic Variables 
+a=12
+b=12.23
+c="Pranit More"
+d=True
+e=53j
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+print(type(e))
+#Bollean Variables 
+a=True
+b=False
+print(type(a))
+print(type(b))
+#String
+s="hello welcome in avigna ai"
+print(type(s))
+#charector to unicode 
+a="B"
+print(ord(a))
+#Ubicode to Charector 
+b=76
+print(chr(b))
+#indexing and slicling
+a="Avigna is the best company"
+print(a[7])#indexing
+print(a[1:9:1])#slicingy
+###################################################################################
+#Type Conversion 
+#int to str 
+i=12
+i=str(i)
+print(type(i))
+#str to int 
+a="25"
+a=int(a)
+print(type(a))
+#for boolean 
+a=12
+print(bool(a))
+b=12.3
+print(bool(b))
+c="3adsqaf%^$&424535c"
+print(bool(c))
+d=True
+print(bool(d))
+e={}
+print(bool(e))
+f=0
+print(bool(f))
+g=23j
+print(bool(g))
+#####################################################################################
+##IO
+#formated string 
+name="Pritam"
+age=21
+print(f"hello {name} and your age is {age}")
+#Non formated String
+name="Ayub"
+age=30
+print("hello",name,"and your age is",age)
+#input from user 
+"""
+n=(input("Enter Your Name :"))
+a=int(input("Enter your Age :"))
+print(f"hello {n} and your age is {a}")
+###########################################################################################
+##Operators 
+#Arthmatic Operator
+a=int(input("Enter Your First Value:"))
+b=int(input("Enter Your Second Value:"))
+print(f"Addition is : {a+b}")
+print(f"Substraction is : {a-b}")
+print(f"Multiplication is : {a*b}")
+print(f"Divide is : {a/b}")
+print(f"Floor Divition is : {a//b}")
+print(f"Modules is : {a%b}")
+print(f"Exponenstional is : {a**b}")"""
+#Assignment
+a=10
+print(a)
+#Compound Operator 
+a=10
+print(a)
+a+=10
+print(a)
+a-=2
+print(a)
+a*=3
+print(a)
+a/=2
+print(a)
+a//=2
+print(a)
+a%=2
+print(a)
+a**2
+print(a)
+#Comparision
+a=12
+b=23
+print(a>b)
+print(a<b)
+print(a!=b)
+print(a<=b)
+print(a>=b)
+print(233>4532)
+print(232<=342)
+##Logical Operator 
+print(1212<32234 and 243124>352 and 3231412>3424 and 54325<535352)
+print(2321<452352 and 3424235>4535636 and 23423523<436532 )
+print(12>343 or 2324<5 or 2324>34325423 or 21>232134)
+print(121>213 or 2334>45324552 or 132123>3324 or 73473>378323287)
+print(not 2324>3425)
+print(not 2324<3425)
+##########################################################################################
+##Conditional Statement Questions 
+#Gretest Number
+a=12
+b=53
+if a>b:
+    print(f"{a} is greter than {b}")
+else:
+    print(f"{b} is greter than {a}")
+
+##Gretest Number from user input
+a=int(input("Enter Your frist Number:"))
+b=int(input("Enter Your Second Number:"))
+
+if a>b:
+    print(f"{a} is greter than {b}")
+else:
+    print(f"{b} is greter than {a}")
+    
+##Accept gender from user and print (for Example Good Morning Sir/Madam)
+gen=(input("Enter Your Gener Like (M/F) :"))
+if gen=="M":
+    print(f"Hello {gen}, Good Mirning Sir")
+
+elif gen=="F":
+    print(f"Heloo {gen}, Good Morning Madam")
+    
+else:
+    print("Enter Correct Value")
+##check Even Odd From User 
+num=int("Enter Your Number for check it is Even or Odd:")
+if num%2==0:
+    print(f"{num} is Even ")
+else:
+    print(f"{num} is Odd")
+##Valid Voter or not
+name=(input("Enter Your Number:"))
+age=int(input("Enter Your Age :"))
+if age>=18:
+    print(f"Hello {name} you are valid for voter ")
+else:
+    print(f"Hello {name} you are not valid for voter")
+##year leap or noiit 
+y=int(input("Enter Your Number:"))
+
+if y%4==0 and y%400==0 and y%100!=0:
+    print(f"{y} is Leap Year")
+else:
+    print(f"{y} is not a leap year")
+##Elif Ladder 
+t=int(input("Enter your Temprature :"))
+
+if t<0:
+    print("Freezing Cool")
+elif t>0 and t<10:
+    print("Very Cool")
+elif t>10 and t<20:
+    print("Cool")
+elif t>20 and t<30:
+    print("pleasent")
+elif t>30 and t<40:
+    print("Hot")
+elif t>40:
+    print("Very Hot")
+##################################################################################
