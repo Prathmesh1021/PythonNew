@@ -537,7 +537,7 @@ name="Ayub"
 age=30
 print("hello",name,"and your age is",age)
 #input from user 
-"""
+
 n=(input("Enter Your Name :"))
 a=int(input("Enter your Age :"))
 print(f"hello {n} and your age is {a}")
@@ -552,7 +552,7 @@ print(f"Multiplication is : {a*b}")
 print(f"Divide is : {a/b}")
 print(f"Floor Divition is : {a//b}")
 print(f"Modules is : {a%b}")
-print(f"Exponenstional is : {a**b}")"""
+print(f"Exponenstional is : {a**b}")
 #Assignment
 a=10
 print(a)
@@ -620,20 +620,20 @@ elif gen=="F":
 else:
     print("Enter Correct Value")
 ##check Even Odd From User 
-num=int("Enter Your Number for check it is Even or Odd:")
+num=int(input("Enter Your Number for check it is Even or Odd:"))
 if num%2==0:
     print(f"{num} is Even ")
 else:
     print(f"{num} is Odd")
 ##Valid Voter or not
-name=(input("Enter Your Number:"))
+name=(input("Enter Your Name:"))
 age=int(input("Enter Your Age :"))
 if age>=18:
     print(f"Hello {name} you are valid for voter ")
 else:
     print(f"Hello {name} you are not valid for voter")
 ##year leap or noiit 
-y=int(input("Enter Your Number:"))
+y=int(input("Enter Your Number for check leap or not:"))
 
 if y%4==0 and y%400==0 and y%100!=0:
     print(f"{y} is Leap Year")
@@ -653,5 +653,417 @@ elif t>20 and t<30:
 elif t>30 and t<40:
     print("Hot")
 elif t>40:
-    print("Very Hot")
+    print("Very Hot") 
 ##################################################################################
+#Break & Continue
+#break 
+for i in range (1,23):
+    if i==7:
+        break
+    print(i)
+print("**********")
+#Continue
+for i in range (1,5):
+    if i==3:
+        continue
+    print(i)
+#####################################################################################
+#function 
+#Sample Function 
+def hello():
+    print("hello welcome in Avigna Ai ")
+hello()
+#Using Argument Addition
+def add(a,b):
+    print(f"Addition is :{a+b}")
+add(12,42)
+#KeyWord Argument
+def info(name,age):
+    print(f"hello {name} and your age is {age}")
+info("Sudhir",13)
+#Default Argument
+def info2(name="Swapnil",age=12):
+    print(f"hello {name} and your age is{age}")
+info2()
+#Palliendrome 
+def pallindrome(st):
+    rev=""
+    for i in range(len(st)-1,-1,-1):
+        rev=rev+st[i]
+    if rev==st:
+        print(f"{st} is pallindrome")
+    else:
+        print(f"{st} is not a pallindrome")
+pallindrome("naman")   
+pallindrome("123321")
+pallindrome("sakshi")
+###################################################################################
+##DAta Structure #List 
+#List Trversing 
+#List Indexing 
+l=[1,2,3544,562,46,46,74,43,43,23]
+print(l[5])
+#List Traversing for Loop
+l=[1,2,3,4,5,6,7,8,9]
+for i in range(len(l)):
+    print(l[i])  
+#List Direct Traversing
+l=[8,7,6,5,4,3,2,1]
+for i in range(len(l)):
+    print(i)
+#List Append
+l=[1,2,3,4,5,6,7,8,9]
+l.append(1212)
+print(l)
+#List insert
+l=[1,2,3,4,5,6,7,8,9]
+l.insert(2,565)
+print(l)
+#List Extend 
+l=[1,2,3,4,5,6,7,8,9]
+l.extend([12,13,14])
+print(l)
+#Remove 
+l=[1,2,3,4,5,6,7,8,9]
+l.remove(2)
+print(l)
+#Popepd Item 
+l=[1,2,3,4,5,6,7,8,9]
+popeed_item=l.pop(4)
+print(popeed_item)
+#index
+l=[1,2,3,4,5,6,7,8,9]
+index=l.index(5)
+print(index)
+#Count
+l=[1,1,1,1,2,3,4,5,6,7,8,9]
+count=l.count(1)
+print(f" Count of the 1 is:- {count}")
+#Sort
+l=[1,2,3,4,5,6,7,8,9]
+l.sort()
+print(l)
+#reverse
+l=[1,2,3,4,5,6,7,8,9]
+l.reverse()
+print(l)
+#new 
+l=[1,2,3,4,5,6,7,8,9]
+new=l.copy()
+print(new)
+#clear 
+l=[1,2,3,4,5,6,7,8,9]
+l.clear()
+print(l)
+
+##List Assignments 
+#Q-Find Positive Numbers And Negative Numbers in List
+l=[1,2,3,4,5,6,7,8,9,-9,-8,-7,-6,-5,-4,-3,-2,-1]
+for i in l:
+    if i>=0:
+        print(f"Positive Numbers Are :{i}")
+    elif i<0:
+        print(f"Positive Numbers are :{i}")
+#Q-Mean Of the Listr
+l=[1,2,3,4,5,6,7,8,9]
+sum=0
+for i in l:
+    sum =sum+i
+print(f"Mean of the List is :{sum/len(l)}")
+#Q-Find Gretest number and print its index 
+l=[1,2,3,4,5,6,7,8,9]
+largest=l[0]
+for i in range(len(l)):
+    if l[i]>largest:
+        largest=l[i]
+        index=i
+print(f"Your Largest Number is Largest {largest} and also index is {index}")
+##Find the second gretest element in the list 
+l=[12,4,35,35,22,256,456,7,253,6,45535345,3235,543,2,43]
+largest=l[0]
+sec_largest=l[0]
+for i in l:
+    if i>largest:
+       sec_largest=largest
+       largest=i
+    elif i>sec_largest:
+        sec_largest=i
+print(f"largest is :{largest} and Second largest is: {sec_largest}")    
+##cheak is list sorted or not 
+l=[1,2,3,4,5,6,7,8,9]
+for i in range(len(l)-1):
+    if l[i]<l[i+1]:
+        continue
+    else:
+        print(f"List is not Sorted {l}")
+        break
+else:
+    print(f"List is Sorted {l}")
+##########################################################################################
+#Tuple 
+#tuple Traversing
+#Index with for loop
+t=(1,23,54,64,436,2,53,36)
+for i in range(len(t)):
+    print(t[i])
+#direct Value in tuple 
+t=(1,2,3,4,5,6,7,8,9)
+for i in t:
+    print(i)
+#tuple Method
+t=(1,23,54,64,436,2,53,36)
+index=t.index(436)
+print(index)
+#count method 
+t=(1,23,54,64,436,2,54,36)
+count=t.count(54)
+print("Count of 54:",count)
+###########################################################################################
+#Set Traversing 
+#Direct Value
+s={12,432,3,4534,6,245,34,2,52,4,262}
+for i in s:
+    print(i)
+#Set Methods 
+#add
+s={12,432,3,4534,6,245,34,2,52,4,262}
+s.add(1212313)
+print(s)
+#remove 
+s={12,432,3,4534,6,245,34,2,52,4,262}
+s.remove(432)
+print(s)
+#discard
+s={12,3,432,3,4534,6,245,34,2,52,4,262}
+s.discard(3)
+print(s)
+#pop
+s={12,432,3,4534,6,245,34,2,52,4,262}
+s.pop()
+print(s)
+##clear 
+s={12,432,3,4534,6,245,34,2,52,4,262}
+s.clear()
+print(s)
+#union Set
+a={1,2,3}
+b={3,4,5}
+x=a|b
+print(x)
+#intersaction
+a={1,2,3}
+b={3,4,5}
+x=a&b
+print(x)
+#Diffrence
+a={1,2,3}
+b={3,4,5}
+x=a-b
+print(x)
+#symmetric 
+a={1,2,3}
+b={3,4,5}
+x=a^b
+print(x)
+#Set with Hash 
+a=hash("hello")
+print(a)
+b=hash("hello gyus")
+print(b)
+##############################################################################################
+#Dictionary Traversing 
+#Direct value 
+d={1:10,2:20,3:30,4:40,5:50}
+for i in d:
+    print(i)
+#Dictionary Methods 
+d={1:10,2:20,3:30,4:40,5:50}
+d.clear()
+print(d)
+#copy
+d={1:10,2:20,3:30,4:40,5:50}
+d.copy()
+print(d)
+#get 
+d={1:10,2:20,3:30,4:40,5:50}
+x=d.get(2)
+print(x)
+#itemas
+d={1:10,2:20,3:30,4:40,5:50}
+print(d.items())
+##from key
+a={'key1','key2','key3'}
+b=0
+this=dict.fromkeys(a,b)
+print(this)
+##pop
+d={1:10,2:20,3:30,4:40,5:50}
+d.pop(2)
+print(d)
+#keys 
+d={1:10,2:20,3:30,4:40,5:50}
+x=d.keys()
+print(d)
+#pop-iteams 
+d={1:10,2:20,3:30,4:40,5:50}
+d.popitem()
+print(d)
+#set default
+d={1:10,2:20,3:30,4:40,5:50}
+x=d.setdefault(1)
+print(x)
+#Update 
+d={1:10,2:20,3:30,4:40,5:50}
+d.update({5:500})
+print(d)
+##values 
+d={1:10,2:20,3:30,4:40,5:50}
+x=d.values()
+print(x)
+
+##CRUD DICTIONARY
+d={1:10,2:20,3:30,4:40,5:50}
+d[1]=100#update
+d[6]=60#create 
+del d[2]#delete
+print(d)#read
+#Demo Ditionary
+d={1:10,2:20,3:30,4:40,5:50}
+print(d[5])
+##Ditionary Assignments 
+#Merge Two python Ditionary 
+d={1:10,2:20}
+d1={3:30,4:40,5:50}
+for i in d1:
+    d[i]=d1[i]
+print(d)
+##Sum of the all values 
+d1={3:30,4:40,5:50}
+sum=0
+for i in d1:
+    sum=sum+d[i]
+print(sum)
+#Count the frequency of each element 
+a=[1,1,1,2,2,2,3,3,3,4,4,5,5,6,6,6,7,8,9]
+d={}
+for i in a:
+    if i in d.keys():
+        d[i]+=1
+    else:
+        d[i]=1
+print(d)        
+#Combine dictionary and adding values 
+
+d1={10:100,20:200,30:300}
+d2={10:300,30:345,40:700}
+
+for i in d2:
+    if i in d1.keys():
+        d1[i]+=d2[i]
+    else:
+        d1[i]=d2[i]
+print(d1)
+#######################################################################################
+#Loop 
+#for Loop 
+#sample Example
+for i in range (1,31):
+    print(i)
+#20 to 50
+print("__________________________")
+for i in range (20,51):
+    print(i)
+#16 to -1
+print("__________________________")
+for i in range (16,-2,-1):
+    print(i)
+#-3 to -15
+print("__________________________")
+for i in range(-3,-15,-1):
+    print(i)
+#lets print table of 5
+print("__________________________")
+for i in range(5,51,5):
+    print(i)
+#to print using for loop charector 
+print("__________________________")
+a="prathmesh patil"
+for i in range(len(a)):
+    print(a[i])
+#to print using lenght 
+print("__________________________")
+a="prathmesh patil"
+print(len(a))
+for i in range (len(a)):
+    print(a[i])
+#Accept ip from usrer and print multiplicatiuon table 
+print("__________________________")
+n=int(input("Plesae Enter number for which you want Table:"))
+for i in range (n,n*10+1,n):
+    print(i)
+###For Loop Assignments 
+#Accept input and print n times hello word 
+n=int(input("Enter your number for Print Hello World:"))
+for i in range(1,n+1):
+    print("hello world")
+##Accept the input and print numbers 
+n=int(input("Enter your number:"))
+for i in range (1,n+1):
+    print(i)
+##Reverse Number Example 
+n=int(input("Enter your number for reverse:"))
+for i in range (n,0,-1):
+    print(i)
+##Take a Input From User And Print Multiplication table 
+n=int(input("Plaese enter number for Muiltiplication table:"))
+for i in range(1,11,1):
+    print(f"{n} * {i} = {n*i}")
+##Sum up to n numbers 
+n=int(input("Enter your Number For sum:"))
+sum=0
+for i in range(1,n+1,1):
+    sum=sum+i
+print(sum)
+###Factorial Series
+n=int(input("Enter your number for factorial:"))
+fact=1
+for i in range(1,n+1,1):
+    fact=fact*i
+print(fact)
+#Print sum of even and odd numbers 
+n=int(input("Enter your Number for Sum Even and Odd:"))
+Even=0
+Odd=0
+for i in range(1,n+1):
+    if i%2==0:
+        Even =Even +i
+    else:
+        Odd =Odd+i
+print(f"Sum of Even Number is: {Even} and Sum of Odd Number is: {Odd}")
+#Print All Factorial Numbers 
+n=int(input("Enter your Number for all Factorial :"))
+for i in  range (1,n+1):
+    if n%i==0:
+        print(f"Your Factor is {i}")
+###Q Accept a number and Check if it a perfect number or not.
+#A number whose sum of factors is equal to the number itself
+#Ex - 6=1,2,3=6
+n=int(input("Enter Your Values"))
+sum=0
+for i in range(1,n):
+    if n%i==0:
+     sum=sum+i
+if sum==n:
+    print("This is the Perfect Number")
+else:
+    print("this is the Not Pefect Number")
+#Q Check wether the number is prime or not 
+n=int(input("cheack your number prime or not "))
+count=0
+for i in range(1,n+1):
+    if n%i==0:
+        count=count+1
+if count==2:
+    print("your number is prime ")
+else:
+    print("your number is not prime ")
