@@ -1,5 +1,6 @@
 ##class 
 #class Simple Example 
+"""
 class Animal:
     a=10
     def hello(self):
@@ -440,35 +441,35 @@ EO=lambda x: "Even" if x%2==0 else "Odd"
 print(EO(12))
 #################################################################################
 ##Map Square root of values 
-"""a=[1,2,3,4,5,6]
-result=map(lambda x:x*2,a)
-print(list(result))
+"""#a=[1,2,3,4,5,6]
+#result=map(lambda x:x*2,a)
+#print(list(result))
 """
 #Map Square Root Normal Method 
 """
-a=[1,2,3,4,5]
-def double(x):
-    return x*2
-result=map(double,a)
-print(list(result))
+#a=[1,2,3,4,5]
+#def double(x):
+   # return x*2
+#result=map(double,a)
+#print(list(result))
 """
 ###############################################################################
 #Noramla Filter Method
 """ 
-def even(x):
-    if x%2==0:
-       return True
-    else:
-        return False
-a=[1,2,3,4,5,6,7,8,9]
-re=filter(even,a)
-print(list(re))
+#def even(x):
+#    if x%2==0:
+ #      return True
+#  else:
+ #       return False
+#a=[1,2,3,4,5,6,7,8,9]
+#re=filter(even,a)
+#print(list(re))
 """
 #Filter with lambda 
 """
-a=[1,2,3,4,5,6,7,8,9]
-result=filter(lambda x:x if x%2==True else False,a)
-print(list(result))
+#a=[1,2,3,4,5,6,7,8,9]
+#result=filter(lambda x:x if x%2==True else False,a)
+#print(list(result))
 """
 #################################################################################
 #Data Types 
@@ -950,7 +951,7 @@ for i in a:
     if i in d.keys():
         d[i]+=1
     else:
-        d[i]=1
+            d[i]=1
 print(d)        
 #Combine dictionary and adding values 
 
@@ -1066,4 +1067,498 @@ for i in range(1,n+1):
 if count==2:
     print("your number is prime ")
 else:
-    print("your number is not prime ")
+    print("your number is not prime ")"""
+#############################################################################################
+#class 
+class Animal:
+    a=12
+    def hello(self):
+        print("how are you")
+print("hello welcome in class")
+print(Animal().a)
+Animal().hello()
+#class Ex 2
+class Animal:
+    a="Dog"
+    def sound(self):
+        print("bhu bhu")
+print(Animal().a)
+Animal().sound()
+#Class Ex3
+class Car:
+    wheel=4
+    def __init__(self,name):
+        self.name=name
+    def show(self):
+        print(f"Your car name is {self.name}")
+obj=Car("TATA")
+obj.show()        
+#Class Ex4
+class Animal:
+    def __init__(self,age):
+        self.age=age
+    def show(self):
+        print(f"your age is {self.age}")
+    @classmethod
+    def class1(cls):
+        print("this is the class method ")
+    @staticmethod
+    def static():
+        print("this is the static method")
+obj=Animal(12)
+obj.show()
+obj.class1()
+obj.static()
+########################################
+#object Example 
+class object:
+    def hello(self):
+        print("hello welcome in Object Example")
+obj=object()
+obj.hello()
+########################################
+#constructors Sample Example 
+class Hello:
+    def __init__(self,name):
+        self.name=name
+s=Hello("Rohit Sharma")
+print(s.name)
+#Constructor Example 2
+class Hello:
+    def __init__(self,material,zip,pocket):
+        self.material=material
+        self.zip=zip
+        self.pocket=pocket
+    def show (self):
+        print(f"YOur Company Details are :{self.material}, {self.zip}, {self.pocket}")
+obj=Hello("Lather",12,3)
+obj.show()
+###Inheritance 
+#Inheritance Syntax 
+class Parent:
+    a=12
+    def hello(self):
+        print("hello welcome in Inheritance ")
+class Child(Parent):
+    pass
+obj=Child()
+obj.hello()
+print(obj.a)        
+#Using Super Class 
+class Animal:
+    def __init__(self,material,zip):
+        self.material=material
+        self.zip=zip
+class Human(Animal):
+    def __init__(self, material, zip,pockets):
+        super().__init__(material, zip)
+        self.pockets=pockets
+    def show(self):
+        print(f"Your Company Details are: {self.material} ,{self.zip} ,{self.pockets}")
+obj=Human("Nylon",3,5)
+obj.show()
+#Single level inheritance 
+class Single:
+    a="This is Single level inheritance Attribute"
+    def Hello(self):
+        print("This is Single Level method")
+class Level(Single):
+    pass
+obj=Level()
+obj.Hello()
+print(obj.a)
+#Multiple inheritance 
+class Animal:
+    def __init__(self,name):
+        self.name=name
+class Human:
+    def __init__(self,name1,age):
+        self.name1=name1
+        self.age=age
+class Robort(Human,Animal):
+    def __init__(self):
+        Animal.__init__(self,"Tiger")
+        Human.__init__(self,"Aditya",12)
+obj=Robort()
+print(obj.name)
+print(obj.name1)
+print(obj.age) 
+##Multilevel inheritance 
+class Factory:
+    def __init__(self,material,zip):
+        self.material=material
+        self.zip=zip
+class Pune(Factory):
+    def __init__(self, material, zip,pocket):
+        super().__init__(material, zip)
+        self.pocket=pocket
+class Bhopal(Pune):
+    def __init__(self, material, zip, pocket, color):
+        super().__init__(material, zip, pocket)
+        self.color=color
+    def show(self):
+        print(f"Your Comapny Details are:  {self.material} ,{self.zip} ,{self.pocket} ,{self.color}")
+obj=Bhopal("Nylon",12,34,"Black")
+obj.show()
+#Hierarchical 
+class Factory:
+    def __init__(self,material, zip, pocket, color):
+        self.material=material
+        self.zip=zip
+        self.pocket=pocket
+        self.color=color
+class Pune(Factory):
+    def __init__(self, material, zip, pocket, color):
+        super().__init__(material, zip, pocket, color)
+    def show(self):
+        print(f"Pune Factory Details are:{self.material} ,{self.zip} ,{self.pocket} ,{self.color}")
+class Bhopal(Factory):
+    def __init__(self, material, zip, pocket, color):
+        super().__init__(material, zip, pocket, color)
+    def show(self):
+        print(f"Bhopal Factory Details are:{self.material} ,{self.zip} ,{self.pocket} ,{self.color}")
+obj1=Pune("Lather",12,23,"Yellow")
+obj2=Bhopal("Nylone",34,45,"Green")
+obj1.show()
+obj2.show()
+########################################################################
+#DSA python list and Array 
+#create a list 
+l=[]
+m=[12,12313,23,24,2,342,4]
+n=[1322,23.34,"3421","adeqwer","#$@#%@#",True]
+print(l)
+print(m)
+print(n)
+#List Method Example 
+a=[12,34,67,25,675,24,67,43]
+a.append(42)
+a.sort()
+print(a)
+#Algorithm
+mylist=[12,343,567,3,2146,46,2355]
+myval=mylist[0]
+
+for i in mylist:
+    if i<myval:
+      myval=i
+print(f"Lowesat Value ",myval)
+#####################################
+#Stack Sample Example 
+stack=[]
+stack.append('A')
+stack.append('B')
+stack.append('C')
+stack.append('D')
+
+print("Stack",stack)
+
+topelement=stack[-1]
+print("Peek:",topelement)
+
+popelement=stack.pop()
+print(f"pop:",popelement)
+
+print("After Pop Stack is ",stack)
+
+isEmpty=not bool(stack)
+print("Empty",isEmpty)
+
+print("Size of Stack is",len(stack))
+###Stack Class 
+class Stack:
+    def __init__(self):
+        self.stack=[]
+    def push(self,element):
+        self.stack.append(element)
+    def peek(self):
+        if self.isEmpty():
+            return "Stack is Empty"
+        return self.stack[-1] 
+    def pop(self):
+        if self.isEmpty():
+            return "Stack is Empty"
+        return self.stack.pop()
+    def isEmpty(self):
+        return len(self.stack)==0
+    def size(self):
+        return len (self.stack)
+mystack=Stack()
+mystack.push('A')
+mystack.push('B')
+mystack.push('C')
+mystack.push('D')
+mystack.push('E')
+
+print("Stack is :",mystack.stack)
+print("Peek:",mystack.peek())
+print("Pop:",mystack.pop())
+print("After Pop Stack is :",mystack.stack)
+print("Empty:",mystack.isEmpty())
+print("Size of Stack is :",mystack.size())     
+####################################################################
+print("******************************")
+##PolyMorphisam
+# Sample Poly 
+def show():
+    print("hi")
+def show():
+    print("hello")
+show()
+#ploy overriding 
+class Animal:
+    def show(self):
+        print("Hello How Are you")
+class Human(Animal):
+    def show(self):
+       print("hello What about You")
+obj=Human()
+obj.show()
+#Duck Typing 
+class Animal:
+    def show(self):
+        print("i am showing ")
+class Human:
+    def show(self):
+       print("i am also showing")
+obj1=Animal()
+obj=Human()
+obj.show()
+obj1.show()
+#Functional Approach 
+def add(a,b):
+    print(f"Addition {a+b}")
+add(12,34)
+#imparative Approach
+a=123
+b=234
+print(f"Addition is {a+b}")
+##################################################
+#class Public Method
+class Animal:
+    a="this is public attribute"
+    def show(self):
+        print("this is public method")
+class Human(Animal):
+    def show1(self):
+        print(super().a)
+obj=Human()
+obj.show1()
+obj.show()
+#class Protected method 
+class Animal:
+    _a="this is Protected attribute"
+    def _show(self):
+        print("this is Protected method")
+class Human(Animal):
+    def show1(self):
+        print(super()._a)
+obj=Human()
+obj.show1()
+obj._show()
+#private method not acceable 
+class Animal:
+    __a="this is Private attribute"
+    def __show(self):
+        print("this is Private method")
+class Human(Animal):
+    def show1(self):
+        print(super().__a)
+obj=Human()
+#obj.show1()
+#obj.__show()
+#Private access with class 
+class Factory:
+    a="this is the private method with class"
+    def show(self):
+        print(Factory().a)
+obj=Factory()
+obj.show()
+##Public protected private all 
+class Animal:
+    def __init__(self):
+        self.name="Rohit Kumar"
+        self._age=23
+        self.__Salary=25000
+    def show(self):
+        print("Inside the class:--- ")
+        print("Name",self.name) 
+        print("Age",self._age)
+        print("Salary",self.__Salary)   
+obj=Animal()
+obj.show()
+#########################################################################
+#dunder Method 
+class A:
+    def __init__(self,name):
+        self.name=name
+    def __str__(self):
+        print(f"heelo your name is {self.name}")
+obj=A("surya")
+print(obj.name)
+#dunder ex2 add 
+class Animal:
+    def __init__(self,age):
+        self.age=age
+    def __add__(self,other):
+        sum=0
+        for i in other:
+            sum=sum+i.age
+        return f"Your sum of ages are {self.age +sum}"
+obj=Animal(12)
+obj2=Animal(14)  
+obj3=Animal(34)
+print(obj +(obj2,obj3))
+##################################################################################
+##Ternary Operator 
+a=12
+print("Even") if a%2==0 else ("Odd")
+#Comprehension
+#list
+l=[i for i in range (1,31) if i%2==0 ]
+print(l)
+#Dictionary 
+d={i:i**2 for i in range(1,10) if i%2 ==0}
+print(d)
+#set
+s={i*i for i in range(1,10) if i%2 ==0}
+print(s)
+###########################################
+#Abstraction method 
+from abc import ABC,abstractmethod
+class abstract(ABC):
+    @abstractmethod
+    def perimeter(self):
+        pass 
+    @abstractmethod
+    def area(self):
+        pass
+class Square (abstract):
+    def __init__(self,side):
+        self.side=side 
+    def perimeter(self):
+        print("i have created")
+    def area (self):
+        print("i have also cretated ")
+class Circle (abstract):
+    def __init__(self,radious):
+        self.radious=radious
+    def perimeter(self):
+        print("i have created")
+    def area(self):
+        print("i have also created")
+obj=Circle(7)
+obj1=Square(4)
+####################################################################
+#Decorators 
+#Sample Example 
+def decorator (func):
+    def wrapper():
+        print("befor")
+        func()
+        print("after")
+    return wrapper
+@decorator
+def hello():
+    print( "i am prathmesh")
+hello()
+#Sample Decorator addition Example 
+def decorator (func):
+    def wrapper(a,b):
+        print("befor")
+        func(a,b)
+        print("after")
+    return wrapper
+@decorator
+def hello(a,b):
+    print(f"Addition is:{a+b}")
+hello(12,43)
+#Arges Example Addition 
+def add(*args):
+    sum=0
+    for i in args:
+        sum=sum+i
+    print(sum)
+add(10,20,30)
+##kwargs
+def info(**kwargs):
+    print("Your Information is ")
+    for i in kwargs:
+        print(f"{i}:{kwargs[i]}")
+info(name="Sudhir",age=13,address="pune")
+#Args And Kwargs Boths 
+def decorator (func):
+    def wrapper(*args,**kwargs):
+        print("hello Welcom in Args  & Kwargs")
+        func(*args,**kwargs)
+        print("Thank you i hope you like it")
+    return wrapper
+@decorator
+def add(a,b,c,d,e,f,g):
+    print(f"Addition is {a+b+c+d+e+f+g}")
+add(10,20,30,40,50,60,70)
+#############################################################
+#lambda 
+a=lambda x,y: x+y
+print(a(1,2))
+#Lambda even odd 
+a=lambda x: "even" if x%2==0 else "odd"
+print(a(12))
+
+#map
+#Map Using Lambda
+a=[1,2,3,4,5,6,7,8]
+result=map(lambda x:x*2,a)
+print(list(result))
+#map Using Normal method 
+a=[11,12,13,14,15,16,17,18,19]
+def double(x):
+    return x*2
+result=map(double,a)
+print(list(result))
+
+#Filter with lambda 
+a=[1,2,3,4,5,6,7,8]
+result=filter(lambda x:x if x%2==True else False ,a  )
+print(list(result))
+
+#Filter with normal 
+def even(x):
+    if x%2==0:
+        return True
+    else:
+        return False
+a=[1,2,3,4,5,6,7,8,9]
+result=filter(even,a)
+print(list(result))
+################################################
+##Data Types 
+# Numbric Variables 
+a=12
+b=12.2
+c="Akash"
+d=23j
+e={}
+f=()
+g=[]
+
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+print(type(e))
+print(type(f))
+print(type(g))
+#Boolean 
+a=True 
+b=False
+print(type(a))
+print(type(b))
+#String 
+s="Sudhir is the good man, 132321 #@$@#$%$@%$@#"
+print(s,type(s))
+a="A"
+print(ord(a))
+b=89
+print(chr(b))
+
