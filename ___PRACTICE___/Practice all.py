@@ -1591,7 +1591,7 @@ print(f"hello {name} your age is {age} year old ")
 name="Reyansh"
 age =12
 print("hello ",name,"your age is",age)
-
+"""
 ##I/O From User 
 name=(input("Enter your Name :"))
 std=int(input("Enter Your age "))
@@ -1600,7 +1600,7 @@ print(f"hello {name } and age {age}")
 ##Operators 
 #Arthmatic Operator
 a=int(input("Enter Your First Value:"))
-b=int(input("Enter Your Second Value:"))
+b=int(input("Enter Your Second Value:"))"""
 print(f"Addition is : {a+b}")
 print(f"Substraction is : {a-b}")
 print(f"Multiplication is : {a*b}")
@@ -1629,496 +1629,340 @@ print(a)
 a**2
 print(a)
 #Comparision
-a=12
-b=23
-print(a>b)
+a=21
+b=54
+c="D"
+d="C"
 print(a<b)
-print(a!=b)
-print(a<=b)
+print(a>b)
 print(a>=b)
-print(233>4532)
-print(232<=342)
-##Logical Operator 
-print(1212<32234 and 243124>352 and 3231412>3424 and 54325<535352)
-print(2321<452352 and 3424235>4535636 and 23423523<436532 )
-print(12>343 or 2324<5 or 2324>34325423 or 21>232134)
-print(121>213 or 2334>45324552 or 132123>3324 or 73473>378323287)
-print(not 2324>3425)
-print(not 2324<3425)
-##########################################################################################
-##Conditional Statement Questions 
-#Gretest Number
+print(a<=b)
+print(a!=b)
+print(121<34)
+print(ord(c)>=ord(d))
+print(ord(c)<=ord(d))
+#Logical Operators 
+print(213>34 and 2242>343 and 342<5424 and 3424<435252)
+print(234<34523 and 3423>432432 and 342<43524 and 23414>4321)
+print(23>234131 or 232>321 or 341<3 or 2431<34)
+print(34214>34 or 3432>34524 or 34224<2452234 or 3241<3424121)
+print(not (23134>341234))
+print(not (23134<341234))
+##################################################################################
+#conditional Statment 
+#gretest number 
 a=12
-b=53
+b=10
 if a>b:
-    print(f"{a} is greter than {b}")
+    print(f"{a} is geter then {b}")
 else:
-    print(f"{b} is greter than {a}")
-
-##Gretest Number from user input
-a=int(input("Enter Your frist Number:"))
-b=int(input("Enter Your Second Number:"))
-
+    print(f"{b} is geter than {a}")
+# user input and print getest number 
+"""
+a=int(input("Enter your Firsrt Number:"))
+b=int(input("Enter your Second Number:"))
 if a>b:
-    print(f"{a} is greter than {b}")
+    print(f"{a} is geter then {b}")
 else:
-    print(f"{b} is greter than {a}")
-    
-##Accept gender from user and print (for Example Good Morning Sir/Madam)
-gen=(input("Enter Your Gener Like (M/F) :"))
-if gen=="M":
-    print(f"Hello {gen}, Good Mirning Sir")
-
-elif gen=="F":
-    print(f"Heloo {gen}, Good Morning Madam")
-    
+    print(f"{b} is geter than {a}")
+#accept gender from user and print ex good morning sir or madam 
+gen=(input("Enter your Genter (M/F):"))
+if gen=="M" or gen=="m":
+    print("Good Morning Sir")
+elif gen=="F" or gen=="f":
+    print("Good Morning Madam")
 else:
-    print("Enter Correct Value")
-##check Even Odd From User 
-num=int(input("Enter Your Number for check it is Even or Odd:"))
-if num%2==0:
-    print(f"{num} is Even ")
+    print("Enter valid Value")
+##Check value Even Or Odd Taking Input From User 
+n=int(input("Enter Your Value For Checking Even or Odd:"))
+if n%2==0:
+    print(f"{n} is Even")
 else:
-    print(f"{num} is Odd")
-##Valid Voter or not
+    print(f"{n} is Odd")
+##Valid Voter Or NOt 
 name=(input("Enter Your Name:"))
-age=int(input("Enter Your Age :"))
+age=int(input("Enter Your Age:"))
 if age>=18:
-    print(f"Hello {name} you are valid for voter ")
+    print(f"hello {name} your are valid voter")
 else:
-    print(f"Hello {name} you are not valid for voter")
-##year leap or noiit 
-y=int(input("Enter Your Number for check leap or not:"))
-
-if y%4==0 and y%400==0 and y%100!=0:
+    print(f"hello {name} your are not valid voter bacause your age below 18 years")
+#Cheak leap year or Not 
+y=int(input("Enter Your Year to cheack leap or not :"))
+if y%4==0 or y%400==0 and y%100!=0:
     print(f"{y} is Leap Year")
 else:
-    print(f"{y} is not a leap year")
-##Elif Ladder 
-t=int(input("Enter your Temprature :"))
-
+    print(f"Not a Leap Year")
+##If Else Ladder 
+t=int(input("Enter Temparature :"))
 if t<0:
-    print("Freezing Cool")
+    print("Freezing")
 elif t>0 and t<10:
     print("Very Cool")
 elif t>10 and t<20:
-    print("Cool")
+    print("cool")
 elif t>20 and t<30:
     print("pleasent")
 elif t>30 and t<40:
     print("Hot")
 elif t>40:
-    print("Very Hot") 
-##################################################################################
-#Break & Continue
-#break 
-for i in range (1,23):
-    if i==7:
+    print("very Hot")
+else:
+    print("Enter Valid Value")"""
+###################################################################################
+#Break 
+for i in range (1,31,2):
+    if i ==9:
         break
     print(i)
-print("**********")
-#Continue
-for i in range (1,5):
-    if i==3:
+# Continue
+for i in range (1,21):
+    if i ==7:
         continue
     print(i)
-#####################################################################################
-#function 
-#Sample Function 
+################################################
+# Functions 
+# Sample Function
 def hello():
-    print("hello welcome in Avigna Ai ")
+    print("hello how are you guys")
 hello()
-#Using Argument Addition
-def add(a,b):
-    print(f"Addition is :{a+b}")
-add(12,42)
-#KeyWord Argument
+#Using Argument Addition 
+def Add(a,b):
+    print(f"Addition is {a+b}")
+Add(12,34)
+##Keywords Argument
 def info(name,age):
-    print(f"hello {name} and your age is {age}")
-info("Sudhir",13)
-#Default Argument
-def info2(name="Swapnil",age=12):
-    print(f"hello {name} and your age is{age}")
-info2()
-#Palliendrome 
+    print(f"Hello {name} and Your age is {age}")
+info("Prathmesh",23)
+#Default Argument 
+def info2(name,age=12):
+    print(f"hello {name} and your age {age}")
+info2("Sunita")
+#Pallindrome 
 def pallindrome(st):
     rev=""
-    for i in range(len(st)-1,-1,-1):
-        rev=rev+st[i]
+    for i in range (len(st)-1,-1,-1):
+        rev=rev+st[i] 
     if rev==st:
         print(f"{st} is pallindrome")
     else:
         print(f"{st} is not a pallindrome")
-pallindrome("naman")   
+pallindrome("naman")
 pallindrome("123321")
 pallindrome("sakshi")
-###################################################################################
-##DAta Structure #List 
-#List Trversing 
-#List Indexing 
-l=[1,2,3544,562,46,46,74,43,43,23]
-print(l[5])
-#List Traversing for Loop
-l=[1,2,3,4,5,6,7,8,9]
-for i in range(len(l)):
+#Function with return 
+def add (a,b):
+    return a+b
+print(add(12,21))        
+################################################################
+#list indexing
+l=[12,13,14,15,16,17,18]
+print(l[4])
+#list Travesing for loop
+l=[12,13,14,15,16,17,18]
+for i in range (len(l)):
     print(l[i])  
-#List Direct Traversing
-l=[8,7,6,5,4,3,2,1]
-for i in range(len(l)):
+#list Travesing for loop Direct value method 
+l=[12,13,14,15,16,17,18]
+for i in l:
     print(i)
-#List Append
-l=[1,2,3,4,5,6,7,8,9]
-l.append(1212)
+#list append
+l=[12,13,14,15,16,17,18]
+l.append(19)
 print(l)
-#List insert
-l=[1,2,3,4,5,6,7,8,9]
-l.insert(2,565)
+#list insert 
+l=[12,13,14,15,16,17,18]
+l.insert(2,56)
 print(l)
-#List Extend 
-l=[1,2,3,4,5,6,7,8,9]
-l.extend([12,13,14])
+#list extend
+l=[12,13,14,15,16,17,18]
+l.extend([10,20,30])
 print(l)
-#Remove 
-l=[1,2,3,4,5,6,7,8,9]
-l.remove(2)
+#list remove 
+l=[12,13,14,15,16,17,18]
+l.remove(18)
 print(l)
-#Popepd Item 
-l=[1,2,3,4,5,6,7,8,9]
-popeed_item=l.pop(4)
-print(popeed_item)
-#index
-l=[1,2,3,4,5,6,7,8,9]
-index=l.index(5)
+#list Popped iteam 
+l=[12,13,14,15,16,17,18]
+Pop_Item=l.pop(1)
+print(Pop_Item)
+print(l)
+#list index 
+l=[12,13,14,15,16,17,18]
+index=l.index(18)
 print(index)
-#Count
-l=[1,1,1,1,2,3,4,5,6,7,8,9]
-count=l.count(1)
-print(f" Count of the 1 is:- {count}")
-#Sort
-l=[1,2,3,4,5,6,7,8,9]
+#list Count
+l=[12,12,12,13,14,15,12,16,17,18]
+Count_12=l.count(12)
+print(Count_12)
+#listS Sort
+l=[12,12,12,13,14,15,12,16,17,18]
 l.sort()
 print(l)
-#reverse
-l=[1,2,3,4,5,6,7,8,9]
+#list Reverse 
+l=[12,12,12,13,14,15,12,16,17,18]
 l.reverse()
 print(l)
-#new 
-l=[1,2,3,4,5,6,7,8,9]
+#list new
+l=[12,12,12,13,14,15,12,16,17,18]
 new=l.copy()
 print(new)
-#clear 
-l=[1,2,3,4,5,6,7,8,9]
-l.clear()
+#list Copy
+l=[12,12,12,13,14,15,12,16,17,18]
+l.copy()
 print(l)
-
-##List Assignments 
-#Q-Find Positive Numbers And Negative Numbers in List
-l=[1,2,3,4,5,6,7,8,9,-9,-8,-7,-6,-5,-4,-3,-2,-1]
+############List Assignments 
+#Find Positive And Negative Numbers 
+l=[12,12,-12,-13,14,-15,12,16,-17,18]
 for i in l:
     if i>=0:
-        print(f"Positive Numbers Are :{i}")
+        print(f"{i} is positive")
     elif i<0:
-        print(f"Positive Numbers are :{i}")
-#Q-Mean Of the Listr
-l=[1,2,3,4,5,6,7,8,9]
-sum=0
+        print(f"{i} is Negative")
+####mean of the list 
+l=[12,12,12,13,14,15,12,16,17,18]
+sum =0
 for i in l:
-    sum =sum+i
-print(f"Mean of the List is :{sum/len(l)}")
-#Q-Find Gretest number and print its index 
-l=[1,2,3,4,5,6,7,8,9]
-largest=l[0]
-for i in range(len(l)):
-    if l[i]>largest:
-        largest=l[i]
+    sum=sum+i
+print(sum/len(l))
+##find gretest element in the list 
+a=[12,12,12,13,45,15,12,16,17,18]
+largest=a[0]
+for i in range (len(a)):
+    if a[i]>largest:
+        largest=a[i]
         index=i
-print(f"Your Largest Number is Largest {largest} and also index is {index}")
-##Find the second gretest element in the list 
-l=[12,4,35,35,22,256,456,7,253,6,45535345,3235,543,2,43]
-largest=l[0]
-sec_largest=l[0]
-for i in l:
+print(f"largest value {largest} and index is {index}")
+##Find Second largest value in the list 
+b=[12,14,15,56,34,56,574,453,53,74,742,25]
+largest=b[0]
+sec_largest=b[0]
+for i in b:
     if i>largest:
-       sec_largest=largest
-       largest=i
+        sec_largest=largest
+        largest=i
     elif i>sec_largest:
         sec_largest=i
-print(f"largest is :{largest} and Second largest is: {sec_largest}")    
-##cheak is list sorted or not 
-l=[1,2,3,4,5,6,7,8,9]
-for i in range(len(l)-1):
-    if l[i]<l[i+1]:
+print(sec_largest,largest)
+#cheack if list is sorted or not 
+s=[12,13,14,15,16,17]
+for i in range (len(s)-1,):
+    if s[i]<s[i+1]:
         continue
     else:
-        print(f"List is not Sorted {l}")
+        print(f"List is Not Sorted:-{s}")
         break
 else:
-    print(f"List is Sorted {l}")
-##########################################################################################
-#Tuple 
-#tuple Traversing
-#Index with for loop
-t=(1,23,54,64,436,2,53,36)
-for i in range(len(t)):
+    print(f"List is Sorted:-{s}")
+###########################################################
+#Tuples
+#for loop index 
+t=(13,4,25,74,12245,46,4,34,4)
+for i in range (len(t)):
     print(t[i])
-#direct Value in tuple 
-t=(1,2,3,4,5,6,7,8,9)
+#Direct Value 
+t=(12,43,5,56,745,24,45,325)
 for i in t:
     print(i)
-#tuple Method
-t=(1,23,54,64,436,2,53,36)
-index=t.index(436)
+# tuple index 
+t=(10,11,12,13,14,15,16,17,18)
+index=t.index(14)
 print(index)
-#count method 
-t=(1,23,54,64,436,2,54,36)
-count=t.count(54)
-print("Count of 54:",count)
-###########################################################################################
-#Set Traversing 
-#Direct Value
-s={12,432,3,4534,6,245,34,2,52,4,262}
+#Count 
+t=(10,11,10,13,14,10,16,17,10)
+count=t.count(10)
+print(count)
+########################################################################################
+##Set 
+s={12,13,14,15,16,17}
 for i in s:
     print(i)
-#Set Methods 
-#add
-s={12,432,3,4534,6,245,34,2,52,4,262}
-s.add(1212313)
+#set add 
+s={12,13,14,15,16,17}
+s.add(234)
 print(s)
-#remove 
-s={12,432,3,4534,6,245,34,2,52,4,262}
-s.remove(432)
+#set remove
+s={12,13,14,15,16,17}
+s.remove(13)
 print(s)
-#discard
-s={12,3,432,3,4534,6,245,34,2,52,4,262}
-s.discard(3)
+#set Discard 
+s={12,13,14,15,16,17}
+s.discard(16)
 print(s)
-#pop
-s={12,432,3,4534,6,245,34,2,52,4,262}
-s.pop()
-print(s)
-##clear 
-s={12,432,3,4534,6,245,34,2,52,4,262}
+#set pop 
+s={12,13,14,15,16,17}
+pop=s.pop()
+print(pop)
+#set clear 
+s={12,13,14,15,16,17}
 s.clear()
 print(s)
-#union Set
-a={1,2,3}
-b={3,4,5}
+#set  union 
+a={10,20,30}
+b={30,40,50}
 x=a|b
 print(x)
-#intersaction
-a={1,2,3}
-b={3,4,5}
+#set insertion 
+a={10,20,30}
+b={30,40,50}
 x=a&b
 print(x)
-#Diffrence
-a={1,2,3}
-b={3,4,5}
+#set diffrence 
+a={10,20,30}
+b={30,40,50}
 x=a-b
 print(x)
-#symmetric 
-a={1,2,3}
-b={3,4,5}
+#set Symmetric 
+a={10,20,30}
+b={30,40,50}
 x=a^b
 print(x)
-#Set with Hash 
-a=hash("hello")
-print(a)
-b=hash("hello gyus")
-print(b)
-##############################################################################################
-#Dictionary Traversing 
-#Direct value 
-d={1:10,2:20,3:30,4:40,5:50}
-for i in d:
-    print(i)
-#Dictionary Methods 
-d={1:10,2:20,3:30,4:40,5:50}
-d.clear()
-print(d)
-#copy
-d={1:10,2:20,3:30,4:40,5:50}
-d.copy()
-print(d)
-#get 
-d={1:10,2:20,3:30,4:40,5:50}
-x=d.get(2)
-print(x)
-#itemas
-d={1:10,2:20,3:30,4:40,5:50}
-print(d.items())
-##from key
-a={'key1','key2','key3'}
-b=0
-this=dict.fromkeys(a,b)
-print(this)
-##pop
-d={1:10,2:20,3:30,4:40,5:50}
-d.pop(2)
-print(d)
-#keys 
-d={1:10,2:20,3:30,4:40,5:50}
-x=d.keys()
-print(d)
-#pop-iteams 
-d={1:10,2:20,3:30,4:40,5:50}
-d.popitem()
-print(d)
-#set default
-d={1:10,2:20,3:30,4:40,5:50}
-x=d.setdefault(1)
-print(x)
-#Update 
-d={1:10,2:20,3:30,4:40,5:50}
-d.update({5:500})
-print(d)
-##values 
-d={1:10,2:20,3:30,4:40,5:50}
-x=d.values()
-print(x)
-
-##CRUD DICTIONARY
-d={1:10,2:20,3:30,4:40,5:50}
-d[1]=100#update
-d[6]=60#create 
-del d[2]#delete
-print(d)#read
-#Demo Ditionary
-d={1:10,2:20,3:30,4:40,5:50}
-print(d[5])
-##Ditionary Assignments 
-#Merge Two python Ditionary 
-d={1:10,2:20}
-d1={3:30,4:40,5:50}
-for i in d1:
-    d[i]=d1[i]
-print(d)
-##Sum of the all values 
-d1={3:30,4:40,5:50}
-sum=0
-for i in d1:
-    sum=sum+d[i]
-print(sum)
-#Count the frequency of each element 
-a=[1,1,1,2,2,2,3,3,3,4,4,5,5,6,6,6,7,8,9]
-d={}
-for i in a:
-    if i in d.keys():
-        d[i]+=1
-    else:
-            d[i]=1
-print(d)        
-#Combine dictionary and adding values 
-
-d1={10:100,20:200,30:300}
-d2={10:300,30:345,40:700}
-
-for i in d2:
-    if i in d1.keys():
-        d1[i]+=d2[i]
-    else:
-        d1[i]=d2[i]
-print(d1)
-#######################################################################################
-#Loop 
-#for Loop 
-#sample Example
-for i in range (1,31):
+#set with hash 
+abcd=hash("hello")
+print(abcd)
+#################################################################################################S
+#For Loop Example 
+#sample Example 
+for i in range(1,31):
     print(i)
 #20 to 50
-print("__________________________")
 for i in range (20,51):
     print(i)
 #16 to -1
-print("__________________________")
 for i in range (16,-2,-1):
     print(i)
 #-3 to -15
-print("__________________________")
-for i in range(-3,-15,-1):
+for i in range(-3,-16,-1):
     print(i)
 #lets print table of 5
-print("__________________________")
 for i in range(5,51,5):
     print(i)
-#to print using for loop charector 
-print("__________________________")
-a="prathmesh patil"
+# to print using lenght 
+a="prathmesh"
 for i in range(len(a)):
     print(a[i])
-#to print using lenght 
-print("__________________________")
-a="prathmesh patil"
-print(len(a))
-for i in range (len(a)):
-    print(a[i])
-#Accept ip from usrer and print multiplicatiuon table 
-print("__________________________")
-n=int(input("Plesae Enter number for which you want Table:"))
-for i in range (n,n*10+1,n):
+# to print using for loop charector 
+b="Avigna Ai is the best Company"
+print(len(b))
+for i in range(len(b)):
     print(i)
-###For Loop Assignments 
-#Accept input and print n times hello word 
-n=int(input("Enter your number for Print Hello World:"))
+#Accept input from user and print Multiplication tables 
+n=int(input("enter your number for Multiplication table :"))
+for i in range(n,n*10+1,n):
+    print(i)
+##########Assignmental Questions#################################################
+#Accept input print n times hello world 
+n=int(input("enter your number for Hello world :"))
 for i in range(1,n+1):
-    print("hello world")
-##Accept the input and print numbers 
-n=int(input("Enter your number:"))
-for i in range (1,n+1):
+    print("hello World")
+#Number up to n 
+n=int(input("enter your number for print Numbers:"))
+for i in range(1,n+1,):
     print(i)
-##Reverse Number Example 
-n=int(input("Enter your number for reverse:"))
-for i in range (n,0,-1):
-    print(i)
-##Take a Input From User And Print Multiplication table 
-n=int(input("Plaese enter number for Muiltiplication table:"))
-for i in range(1,11,1):
+#Accept input from user and multiplication tables 
+n=int(input("Enter Number For Multiplication Table :"))
+for i in range (1,11,1):
     print(f"{n} * {i} = {n*i}")
-##Sum up to n numbers 
-n=int(input("Enter your Number For sum:"))
-sum=0
-for i in range(1,n+1,1):
-    sum=sum+i
-print(sum)
-###Factorial Series
-n=int(input("Enter your number for factorial:"))
-fact=1
-for i in range(1,n+1,1):
-    fact=fact*i
-print(fact)
-#Print sum of even and odd numbers 
-n=int(input("Enter your Number for Sum Even and Odd:"))
-Even=0
-Odd=0
-for i in range(1,n+1):
-    if i%2==0:
-        Even =Even +i
-    else:
-        Odd =Odd+i
-print(f"Sum of Even Number is: {Even} and Sum of Odd Number is: {Odd}")
-#Print All Factorial Numbers 
-n=int(input("Enter your Number for all Factorial :"))
-for i in  range (1,n+1):
-    if n%i==0:
-        print(f"Your Factor is {i}")
-###Q Accept a number and Check if it a perfect number or not.
-#A number whose sum of factors is equal to the number itself
-#Ex - 6=1,2,3=6
-n=int(input("Enter Your Values"))
-sum=0
-for i in range(1,n):
-    if n%i==0:
-     sum=sum+i
-if sum==n:
-    print("This is the Perfect Number")
-else:
-    print("this is the Not Pefect Number")
-#Q Check wether the number is prime or not 
-n=int(input("cheack your number prime or not "))
-count=0
-for i in range(1,n+1):
-    if n%i==0:
-        count=count+1
-if count==2:
-    print("your number is prime ")
-else:
-    print("your number is not prime ")
+#Reverse Numbers
+n=int(input("Enter Number For Reverse Number :"))
+for i in range(n,0,-1):
+    print(i)
