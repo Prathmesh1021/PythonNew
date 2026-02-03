@@ -1919,7 +1919,85 @@ print(x)
 #set with hash 
 abcd=hash("hello")
 print(abcd)
-#################################################################################################S
+####################################################################################################
+#Dictionary Example 
+#For Loop Traversing 
+d={1:10,2:20,3:30,4:40,5:50}
+for i in d:
+    print(i)
+## Dict Clear 
+d={1:10,2:20,3:30,4:40,5:50}
+d.clear()
+print(d)
+## Dict Copy
+d={1:10,2:20,3:30,4:40,5:50}
+d.copy()
+print(d)
+##Dict get
+d={1:10,2:20,3:30,4:40,5:50}
+x=d.get(1)
+print(x)
+## dict items
+d={1:10,2:20,3:30,4:40,5:50}
+a=d.items()
+print(a)
+#From key 
+x={'key 1','key 2','key 3'}
+y=0
+a=dict.fromkeys(x, y)
+print(a)
+#pop dict 
+d={1:10,2:20,3:30,4:40,5:50}
+d.pop(5)
+print(d)
+#keys dict
+d={1:10,2:20,3:30,4:40,5:50}
+x=d.keys()
+print(x) 
+#pop items
+d={1:10,2:20,3:30,4:40,5:50}
+ppd=d.popitem()
+print(ppd)
+#set default dict 
+d={1:10,2:20,3:30,4:40,5:50}
+x=d.setdefault(6,60)
+print(x)
+##Dict update 
+d={1:10,2:20,3:30,4:40,5:50}
+d.update({1:100})
+print(d)
+##Dict values 
+d={1:10,2:20,3:30,4:40,5:50}
+x=d.values()
+print(x)
+#CRUD Ditionary 
+d={1:10,2:20,3:30,4:40,5:50}
+d[1]=100 #update 
+d[6]=600 #create 
+del d[2] #delete 
+print(d) #Read 
+#Demo Dictionary
+d={1:10,2:20,3:30,4:40,5:50}
+print(d[4])
+###########
+#Dictionary Assignments 
+#merge Rwo Python Dict 
+d={1:10,2:20,3:30,4:40,5:50}
+d1={6:60,7:70,8:80,9:90}
+for i in d1:
+    d[i]=d1[i]
+print(d)
+
+##Sum of all Values in Dictionary
+d={1:10,2:20,3:30,4:40,5:50}
+sum=0
+for i in d:
+    sum =sum+d[i]
+print(sum)
+
+#Count Of Eatch Element in Dictionary 
+
+#######################################################################################################
 #For Loop Example 
 #sample Example 
 for i in range(1,31):
@@ -1966,3 +2044,40 @@ for i in range (1,11,1):
 n=int(input("Enter Number For Reverse Number :"))
 for i in range(n,0,-1):
     print(i)
+##Sum Up to n  turms 
+n=int(input(" Enter Your Number for Sum Of the Values: "))
+sum=0
+for i in range (1,n+1):
+    sum=sum+i
+print(sum)
+##FactoriaL Numbers 
+n=int(input("Enter Number For Factorial Number:"))
+fact=1
+for i in range(1,n+1):
+    fact=fact*i
+print(f"Your Factorial is :{fact}")
+##Print Sum of Even & Odd Numbers 
+a=int(input("Tell your Number:"))
+Even=0
+Odd=0
+for i in range(1,n+1):
+    if i%2==0:
+        Even = Even+i
+    else: 
+        Odd = Odd+i
+print(F"Your Even Sum is {Even} and Your Odd Sum is {Odd}")
+##Print all factorial 
+n=int(input("Enter Number For Factorial :-"))
+for i in range(1,n+1):
+    if n%i==0:
+        print(f"This is Your Factor:{i}")
+##check perfect number or not 
+n=int(input("Cheack perfect Number :"))
+sum=0
+for i in range(1,n):
+    if n%i==0:
+        sum = sum + i
+if sum == n:
+    print("This is perfect number ")
+else:
+    print("this is not a perfect number")
